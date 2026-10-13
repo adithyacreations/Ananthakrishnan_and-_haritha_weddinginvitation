@@ -1,0 +1,32 @@
+/* The source photographs stay in /images; these rules crop only the display boxes. */
+.image-fallback{display:grid;place-items:center;background:radial-gradient(ellipse at 50% 42%,rgba(184,151,86,.28),transparent 35%),linear-gradient(145deg,#1a493b,#0d3027);color:#e4cd92}
+.image-fallback>span{font:26px var(--serif);opacity:.8}
+.hero-image.image-fallback{position:absolute;inset:0;width:100%;height:100%}
+.portraits{height:clamp(530px,62vw,720px);grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr)}
+.portrait-card{min-width:0}
+.portrait-card>.portrait-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.65,.3,1)}
+.portrait-card:hover>.portrait-image{transform:scale(1.025)}
+.bride-card>.portrait-image{object-position:50% 37%}
+.groom-card>.portrait-image{object-position:65% 31%}
+.portrait-card:after{z-index:1;pointer-events:none}
+.portrait-card>div:not(.image-fallback){z-index:2}
+.venue-image{position:relative;overflow:hidden;background:#d6d1c3}
+.venue-image>.venue-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:63% 62%}
+.venue-image>.image-fallback{position:absolute;inset:0}
+@media(max-width:760px){
+ .portraits{height:auto;grid-template-columns:1fr 64px 1fr}
+ .portrait-card{height:clamp(360px,112vw,470px)}
+ .portrait-center{min-width:0}
+ .bride-card>.portrait-image{object-position:50% 38%}
+ .groom-card>.portrait-image{object-position:65% 30%}
+}
+@media(max-width:520px){
+ .portraits{grid-template-columns:1fr;height:auto}
+ .portrait-card{height:clamp(390px,126vw,510px)}
+ .portrait-center{height:74px;display:flex;align-items:center;justify-content:center;gap:16px}
+ .portrait-center p{writing-mode:initial;margin:0;font-size:17px;line-height:1.05}
+ .portrait-center span{font-size:12px}
+ .bride-card>.portrait-image{object-position:50% 39%}
+ .groom-card>.portrait-image{object-position:65% 32%}
+}
+@media(prefers-reduced-motion:reduce){.portrait-card>.portrait-image{transition:none}}

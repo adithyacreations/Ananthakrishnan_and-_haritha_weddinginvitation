@@ -1,0 +1,170 @@
+.wedding-gallery{position:relative;padding:clamp(82px,9vw,118px) clamp(24px,8vw,120px) clamp(90px,10vw,132px);background:linear-gradient(140deg,#f6f0e4,#eae2d3);overflow:hidden}
+.wedding-gallery:before{content:'❋';position:absolute;right:-32px;top:34%;color:rgba(97,45,56,.09);font:clamp(100px,16vw,190px) var(--serif);pointer-events:none}
+.gallery-heading{position:relative;z-index:1;max-width:620px;margin:0 auto 39px;text-align:center}
+.gallery-heading h2,.invitation-sharing h2,.rsvp-section h2{margin:0;color:var(--maroon);font:400 clamp(40px,5vw,62px)/1 var(--serif)}
+.gallery-heading>p:last-child{margin:15px auto 0;color:#6f6a5f;font:300 15px/1.7 var(--serif)}
+.gallery-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:clamp(12px,2.2vw,28px);max-width:1190px;margin:auto}
+.gallery-card{min-width:0;margin:0;padding:8px;border:1px solid rgba(167,137,79,.46);background:rgba(250,247,239,.82);box-shadow:0 13px 34px rgba(50,42,27,.08)}
+.gallery-open{position:relative;display:block;width:100%;padding:0;border:0;background:#ddd4c0;overflow:hidden;cursor:zoom-in;text-align:left}
+.gallery-open:focus-visible{outline:3px solid #987c45;outline-offset:4px;z-index:1}
+.gallery-open img{display:block;width:100%;height:auto;object-fit:cover;transition:transform .7s cubic-bezier(.2,.65,.25,1)}
+.gallery-open-landscape img{aspect-ratio:3/2}.gallery-open-portrait img{aspect-ratio:3/4}
+.gallery-open:hover img{transform:scale(1.025)}
+.gallery-card-caption{position:absolute;inset:auto 0 0;padding:34px 15px 13px;background:linear-gradient(transparent,rgba(12,37,29,.72));color:#fff8e8;font:italic 17px var(--serif)}
+.gallery-lightbox{position:fixed;z-index:50;inset:0;display:grid;place-items:center;padding:clamp(12px,3vw,36px);background:rgba(8,20,16,.94)}
+.gallery-dialog{position:relative;display:grid;justify-items:center;max-width:min(1250px,100%);max-height:100%;outline:none}
+.gallery-lightbox-image{display:block;max-width:min(100%,1150px);max-height:calc(100svh - 100px);object-fit:contain;box-shadow:0 18px 65px rgba(0,0,0,.38)}
+.gallery-lightbox-caption{margin:13px 0 0;color:#eee4cc;font:italic 17px var(--serif);text-align:center}
+.gallery-control{position:absolute;z-index:2;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(224,203,155,.62);border-radius:50%;background:rgba(14,43,35,.86);color:#fff7e6;cursor:pointer;transition:background .2s,color .2s}
+.gallery-control:hover,.gallery-control:focus-visible{background:#e7d6ad;color:#183e32}.gallery-control:focus-visible{outline:2px solid white;outline-offset:3px}
+.gallery-close{top:10px;right:10px}.gallery-previous{left:10px;top:50%;transform:translateY(-50%)}.gallery-next{right:10px;top:50%;transform:translateY(-50%)}
+.invitation-sharing{padding:clamp(74px,8vw,105px) 24px;text-align:center;background:#f5efe3;border-top:1px solid rgba(167,137,79,.23)}
+.invitation-sharing>.eyebrow,.rsvp-section>.eyebrow{color:var(--maroon)}
+.invitation-sharing .floral-divider,.rsvp-section .floral-divider{margin:17px auto 23px}
+.sharing-message{max-width:550px;margin:15px auto 0;color:#6d695f;font:300 15px/1.75 var(--serif)}
+.sharing-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:25px}
+.sharing-button{display:inline-flex;min-height:46px;align-items:center;justify-content:center;gap:10px;padding:0 18px;border:1px solid #9d8250;background:transparent;color:#5c2c35;font:500 9px 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.sharing-whatsapp{border-color:#1c6849;background:#1c6849;color:#fff8ea}
+.sharing-button:hover,.sharing-button:focus-visible{background:#dfd0a9;color:#283b2f;border-color:#a7894f}.sharing-button:focus-visible{outline:2px solid #62404a;outline-offset:3px}
+.sharing-status{min-height:1.5em;margin:14px auto 0;color:#605b4f;font:italic 13px var(--serif)}
+.rsvp-section{padding:clamp(74px,8vw,102px) 24px;background:#e9dfd1;text-align:center}
+.rsvp-section h2{color:var(--maroon)}
+.rsvp-introduction{margin:14px auto;color:#6d695f;font:300 15px/1.7 var(--serif)}
+.rsvp-demo-notice{max-width:660px;margin:20px auto;padding:12px 16px;border:1px solid rgba(167,137,79,.45);background:#f8f1e4;color:#685b44;font:12px/1.6 'DM Sans',sans-serif}
+.rsvp-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;max-width:680px;margin:25px auto 0;text-align:left}
+.rsvp-form label{display:flex;flex-direction:column;gap:7px;color:#63494a;font:9px 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.rsvp-form input,.rsvp-form select,.rsvp-form textarea{width:100%;min-height:45px;padding:10px 12px;border:1px solid rgba(114,83,63,.3);border-radius:0;background:#f9f5eb;color:#283e34;font:14px 'DM Sans',sans-serif;letter-spacing:normal;text-transform:none}
+.rsvp-form textarea{resize:vertical}.rsvp-form input:focus-visible,.rsvp-form select:focus-visible,.rsvp-form textarea:focus-visible{outline:2px solid #94784a;outline-offset:2px}
+.rsvp-note-field{grid-column:1/-1}
+.rsvp-submit{grid-column:1/-1;justify-self:center;min-height:45px;padding:0 27px;border:1px solid #642d38;background:#642d38;color:#fff6e5;font:500 9px 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.rsvp-submit:hover,.rsvp-submit:focus-visible{background:#87694a;border-color:#87694a}.rsvp-submit:focus-visible{outline:2px solid #62404a;outline-offset:3px}.rsvp-submit:disabled{opacity:.65;cursor:wait}
+.rsvp-status{min-height:1.5em;margin:13px auto 0;color:#574d3e;font:italic 14px var(--serif)}
+.family-invitation .date-card .date-card-details{color:#665d50;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.family-invitation .date-card .date-card-venue{color:var(--maroon);font:500 15px/1.4 var(--serif);letter-spacing:.02em;text-transform:none}
+.guest-guidance>.guest-card:only-child{grid-column:1/-1;justify-self:center;width:min(820px,100%)}
+.glimmer-field{position:absolute;z-index:0;inset:0;overflow:hidden;pointer-events:none}
+.glimmer-field i{position:absolute;color:#aa8950;font:normal clamp(8px,.85vw,12px) var(--serif);opacity:.3;text-shadow:0 0 7px rgba(222,193,124,.42)}
+.glimmer-field b{position:absolute;width:3px;height:3px;border-radius:50%;background:#e2c274;box-shadow:0 0 7px 2px rgba(226,194,116,.35);opacity:0}
+.glimmer-field i:nth-child(1){left:13%;top:20%;animation-delay:.2s}
+.glimmer-field i:nth-child(2){right:14%;top:34%;animation-delay:1.7s}
+.glimmer-field i:nth-child(3){left:19%;bottom:18%;animation-delay:3.1s}
+.glimmer-field i:nth-child(4){right:21%;bottom:20%;animation-delay:2.4s}
+.glimmer-field b:nth-of-type(1){left:25%;bottom:18%;--drift:-16px;--lift:-58px;animation-delay:.05s}
+.glimmer-field b:nth-of-type(2){left:38%;bottom:12%;--drift:12px;--lift:-82px;animation-delay:.24s}
+.glimmer-field b:nth-of-type(3){left:53%;bottom:20%;--drift:-9px;--lift:-66px;animation-delay:.42s}
+.glimmer-field b:nth-of-type(4){left:68%;bottom:14%;--drift:18px;--lift:-92px;animation-delay:.16s}
+.glimmer-field b:nth-of-type(5){left:77%;bottom:27%;--drift:-13px;--lift:-54px;animation-delay:.58s}
+.glimmer-field b:nth-of-type(6){left:18%;bottom:31%;--drift:15px;--lift:-72px;animation-delay:.34s}
+.glimmer-field b:nth-of-type(7){left:47%;bottom:34%;--drift:11px;--lift:-86px;animation-delay:.68s}
+.glimmer-field b:nth-of-type(8){left:84%;bottom:17%;--drift:-18px;--lift:-68px;animation-delay:.5s}
+.glimmer-field::after{content:"";position:absolute;inset:-15%;background:linear-gradient(108deg,transparent 43%,rgba(229,198,128,.075) 50%,transparent 57%);transform:translateX(-70%);opacity:0}
+[data-scroll-reveal].is-revealed.is-in-view .glimmer-field i{animation:glimmer-breathe 5.4s ease-in-out infinite}
+[data-scroll-reveal].is-revealed .glimmer-field b{animation:gold-dust-lift 2.7s cubic-bezier(.15,.65,.3,1) both}
+[data-scroll-reveal].is-revealed .glimmer-field::after{animation:gold-light-sweep 1.8s ease-out .1s both}
+.glimmer-field-countdown i{color:#e1c77e}
+.glimmer-field-sharing i{color:#b39355}
+.glimmer-field-opening i{color:#e4ca83}
+.glimmer-field-closing i{color:#d9c182}
+.glimmer-field-closing b{background:#e3ca8b;box-shadow:0 0 8px 2px rgba(227,202,139,.34)}
+.countdown-unit span{margin-top:8px}
+.family-invitation .invitation-inner,.countdown>*:not(.glimmer-field),.invitation-sharing>*:not(.glimmer-field){position:relative;z-index:1}
+.couple-story .story-photos,.wedding-events-heading,.wedding-event-grid,.venue-image,.venue-copy{position:relative;z-index:1}
+.couple-story{grid-template-columns:minmax(210px,.78fr) minmax(400px,1.35fr) minmax(210px,.78fr);justify-items:stretch;align-items:center;gap:clamp(20px,3vw,48px);padding-inline:clamp(25px,6vw,100px)}
+.couple-story-copy{grid-column:2;grid-row:1;width:100%;max-width:690px;margin-inline:auto;text-align:center}
+.couple-story-copy .floral-divider{justify-content:center;margin-inline:auto}
+.couple-story-names{justify-content:center;flex-wrap:wrap}
+.couple-story-paragraph{max-width:560px;margin-inline:auto}
+.couple-story .story-photos{display:contents}
+.couple-story .story-photo-bride,.couple-story .story-photo-groom{height:clamp(390px,35vw,500px);z-index:1}
+.couple-story .story-photo-bride{grid-column:1;grid-row:1}
+.couple-story .story-photo-groom{grid-column:3;grid-row:1}
+.couple-story-paragraph{max-width:560px;margin-inline:auto}
+.couple-story .story-photos{width:min(960px,100%)}
+.glimmer-field-story i,.glimmer-field-gallery i{color:#a7894f}
+.glimmer-field-events i,.glimmer-field-venue i{color:#d2b876}
+.glimmer-field-story b,.glimmer-field-gallery b{background:#d5b66e;box-shadow:0 0 9px 2px rgba(213,182,110,.4)}
+.glimmer-field-events b,.glimmer-field-venue b{background:#e4cb8a;box-shadow:0 0 9px 2px rgba(228,203,138,.4)}
+.couple-story .story-photo-bride .story-portrait,.couple-story .story-photo-groom .story-portrait{transform:scale(1.035)}
+.couple-story.is-revealed .story-photo-bride .story-portrait{animation:portrait-settle 1.25s cubic-bezier(.2,.65,.25,1) .12s both}
+.couple-story.is-revealed .story-photo-groom .story-portrait{animation:portrait-settle 1.35s cubic-bezier(.2,.65,.25,1) .25s both}
+.venue.is-revealed .venue-photo{animation:venue-reveal 1.4s cubic-bezier(.2,.65,.25,1) both}
+.wedding-events{isolation:isolate}
+.couple-story,.wedding-gallery,.venue{isolation:isolate}
+.wedding-event-card{transition:transform .45s ease,box-shadow .45s ease}
+.wedding-event-card:hover{transform:translateY(-4px);box-shadow:0 17px 34px rgba(55,47,26,.1)}
+.scroll-cue svg{animation:scroll-nudge 2.1s ease-in-out infinite}
+[data-scroll-reveal]{opacity:0;transform:translate3d(0,18px,0);transition:opacity .78s ease,transform .78s cubic-bezier(.2,.65,.25,1)}
+[data-scroll-reveal].is-revealed{opacity:1;transform:translate3d(0,0,0)}
+footer{position:relative;isolation:isolate;gap:18px}footer .monogram:focus-visible{outline:2px solid #e6d4a8;outline-offset:5px}footer>:not(.glimmer-field):not(.petal-drift){position:relative;z-index:1}
+.footer-signoff{display:flex;flex-direction:column;gap:5px;text-align:center}
+.footer-signoff span:first-child{color:#e1ce9e;font:italic 16px var(--serif)}
+.footer-signoff span:first-child i{padding:0 7px;color:#b89b60;font-size:10px;font-style:normal}
+.footer-signoff span:last-child{color:rgba(245,240,229,.75);font:italic 13px var(--serif)}
+.petal-drift{position:absolute;z-index:0;inset:0;overflow:hidden;pointer-events:none}
+.petal-drift i{position:absolute;left:var(--petal-left);top:var(--petal-top);width:7px;height:11px;border-radius:80% 18% 80% 24%;background:linear-gradient(145deg,rgba(255,249,230,.88),rgba(211,183,117,.72));box-shadow:0 0 8px rgba(232,211,160,.18);opacity:0;transform:translate3d(0,-12px,0) rotate(0);animation:petal-float var(--petal-duration,12s) ease-in-out var(--petal-delay,0s) infinite;animation-play-state:paused;will-change:transform,opacity}
+.petal-drift.is-visible i{animation-play-state:running}
+.petal-drift i:nth-child(1){--petal-left:8%;--petal-top:27%;--petal-delay:.2s;--petal-duration:13s}
+.petal-drift i:nth-child(2){--petal-left:87%;--petal-top:19%;--petal-delay:3.2s;--petal-duration:15s}
+.petal-drift i:nth-child(3){--petal-left:92%;--petal-top:68%;--petal-delay:5.4s;--petal-duration:14s}
+.petal-drift i:nth-child(4){--petal-left:12%;--petal-top:73%;--petal-delay:7.1s;--petal-duration:16s}
+.petal-drift i:nth-child(5){--petal-left:50%;--petal-top:10%;--petal-delay:9.2s;--petal-duration:17s}
+.petal-drift-opening{z-index:3}
+.petal-drift-opening i:nth-child(5){display:none}
+.family-invitation .petal-drift{z-index:0}
+.family-invitation .petal-drift i{background:linear-gradient(145deg,rgba(255,252,239,.9),rgba(203,174,108,.58))}
+.petal-drift-lamp i{background:linear-gradient(145deg,#fff8e5,#d8b86c);box-shadow:0 0 12px rgba(244,197,101,.36)}
+.petal-drift-closing i{opacity:.34;animation-duration:18s}
+.family-invitation .petal-drift i:nth-child(5),.petal-drift-lamp i:nth-child(5),.petal-drift-closing i:nth-child(5){display:none}
+.family-invitation .invitation-inner{position:relative;isolation:isolate}
+.family-invitation .invitation-inner:after{content:"";position:absolute;z-index:-1;inset:-1px;border:1px solid rgba(167,137,79,.72);clip-path:inset(0 50% 0 50%);pointer-events:none}
+.family-invitation.is-revealed .invitation-inner:after{animation:card-frame-unfold .95s cubic-bezier(.2,.65,.25,1) .15s forwards}
+.family-invitation.is-revealed .invitation-inner{animation:card-surface-arrive .82s cubic-bezier(.2,.65,.25,1) .12s both}
+.family-invitation.is-revealed .invitation-inner>.eyebrow{animation:copy-stage .58s ease .35s both}
+.family-invitation.is-revealed .invitation-inner>.floral-divider{animation:copy-stage .58s ease .44s both}
+.family-invitation.is-revealed .invitation-inner>h2{animation:copy-stage .65s ease .52s both}
+.family-invitation.is-revealed .invitation-message{animation:copy-stage .65s ease .63s both}
+.family-invitation.is-revealed .invitation-family-pair{animation:copy-stage .65s ease .76s both}
+.family-invitation.is-revealed .date-card{animation:copy-stage .65s ease .9s both}
+.family-invitation.is-revealed .invitation-ornament{animation:copy-stage .65s ease 1s both}
+.family-invitation.is-revealed .date-card strong{animation:date-gold-arrive .9s ease-out .55s both}
+.story-photo{overflow:hidden}
+.story-photo figcaption{z-index:2}
+.story-photo:before{content:"";position:absolute;z-index:1;inset:9px;border:1px solid rgba(236,216,166,.52);pointer-events:none;opacity:0;transition:opacity .5s ease .45s}
+.couple-story.is-revealed .story-photo:before{opacity:1}
+.story-photo figcaption{opacity:0;transform:translateY(8px);transition:opacity .65s ease .72s,transform .65s ease .72s}
+.couple-story.is-revealed .story-photo figcaption{opacity:1;transform:translateY(0)}
+.wedding-event-grid{position:relative;isolation:isolate}
+.wedding-event-grid:before{content:"";position:absolute;z-index:-1;top:12px;left:16%;right:16%;height:1px;background:linear-gradient(90deg,transparent,rgba(167,137,79,.62),rgba(234,215,164,.85),rgba(167,137,79,.62),transparent);transform:scaleX(0);transform-origin:left;transition:transform 1.1s ease .15s}
+.wedding-events.is-revealed .wedding-event-grid:before{transform:scaleX(1)}
+.wedding-event-card{padding-top:38px}
+.wedding-event-card:after{content:"";position:absolute;top:7px;left:27px;width:9px;height:9px;border:1px solid #a7894f;border-radius:50%;background:#f3ead8;box-shadow:0 0 0 4px rgba(167,137,79,.09),0 0 12px rgba(210,184,118,.2)}
+.gallery-open:after{content:"";position:absolute;inset:0;background:linear-gradient(112deg,transparent 38%,rgba(255,247,222,.28) 50%,transparent 62%);transform:translateX(-120%);pointer-events:none}
+.gallery-open:hover:after,.gallery-open:focus-visible:after{animation:photo-glint .9s ease-out both}
+.gallery-open img{will-change:transform}
+.sharing-status:not(:empty){animation:sharing-arrive .35s ease-out both}
+.countdown-unit strong{display:grid;overflow:hidden;min-height:1em;place-items:center}
+.countdown-unit strong>span{display:inline-block}
+@media(max-width:720px){
+ .topbar{position:absolute}
+ .wedding-gallery{padding:76px 22px 84px}.gallery-grid{grid-template-columns:1fr;max-width:480px;gap:14px}.gallery-card-landscape{max-width:100%}.gallery-open-landscape img{aspect-ratio:16/10}.gallery-open-portrait img{aspect-ratio:4/5;max-height:580px}.gallery-lightbox-image{max-height:calc(100svh - 110px)}
+ .gallery-control{width:40px;height:40px}.gallery-previous{left:7px}.gallery-next{right:7px}.gallery-close{top:8px;right:8px}
+ .rsvp-form{max-width:500px;grid-template-columns:1fr}.rsvp-note-field,.rsvp-submit{grid-column:auto}
+ footer{padding-bottom:88px}
+}
+@keyframes glimmer-breathe{0%,100%{opacity:.22;transform:scale(.82)}50%{opacity:.78;transform:scale(1.12)}}
+@keyframes gold-dust-lift{0%{opacity:0;transform:translate3d(0,0,0) scale(.55)}18%{opacity:.75}72%{opacity:.58}100%{opacity:0;transform:translate3d(var(--drift),var(--lift),0) scale(.2)}}
+@keyframes gold-light-sweep{0%{opacity:0;transform:translateX(-70%)}20%{opacity:1}100%{opacity:0;transform:translateX(70%)}}
+@keyframes portrait-settle{from{transform:scale(1.055)}to{transform:scale(1)}}
+@keyframes venue-reveal{from{transform:scale(1.045);filter:saturate(.7)}to{transform:scale(1);filter:saturate(.9)}}
+@keyframes scroll-nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@keyframes petal-float{0%{opacity:0;transform:translate3d(0,-12px,0) rotate(-20deg)}12%{opacity:.48}50%{opacity:.32;transform:translate3d(22px,45px,0) rotate(45deg)}88%{opacity:.44}100%{opacity:0;transform:translate3d(-8px,90px,0) rotate(95deg)}}
+@keyframes card-frame-unfold{to{clip-path:inset(0 0 0 0)}}
+@keyframes card-surface-arrive{from{opacity:.5;transform:translateY(12px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes date-gold-arrive{0%{text-shadow:0 0 0 rgba(193,157,85,0)}45%{text-shadow:0 0 14px rgba(193,157,85,.55)}100%{text-shadow:0 0 2px rgba(193,157,85,.12)}}
+@keyframes photo-glint{to{transform:translateX(120%)}}
+@keyframes sharing-arrive{from{opacity:.55;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(hover:hover){.gallery-card{transition:transform .55s cubic-bezier(.2,.65,.25,1),box-shadow .55s}.gallery-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(50,42,27,.12)}}
+@media(max-width:760px){.wedding-event-grid{padding-left:27px}.wedding-event-grid:before{top:0;bottom:12px;left:6px;right:auto;width:1px;height:auto;transform:scaleY(0);transform-origin:top}.wedding-events.is-revealed .wedding-event-grid:before{transform:scaleY(1)}.wedding-event-card:after{left:-27px;top:18px}.footer-signoff span:first-child{font-size:14px}}
+@media(max-width:520px){.petal-drift-opening i:nth-child(n+4){display:none}.hero .glimmer-field i:nth-child(n+4){display:none}}
+@media(max-width:980px){.couple-story{grid-template-columns:minmax(0,1fr);justify-items:center;gap:31px;padding:86px 29px 92px}.couple-story-copy{grid-column:auto;grid-row:auto;width:min(680px,100%)}.couple-story .story-photos{display:grid;grid-column:auto;grid-row:auto;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(13px,2vw,24px);width:min(680px,100%);margin:0 auto}.couple-story .story-photo-bride,.couple-story .story-photo-groom{grid-column:auto;grid-row:auto;height:clamp(305px,62vw,450px)}}
+@media(prefers-reduced-motion:reduce){[data-scroll-reveal]{opacity:1;transform:none;transition:none!important}.gallery-open img,.sharing-button,.wedding-event-card{transition:none!important}.wedding-event-card:hover,.gallery-card:hover{transform:none}.couple-story .story-photo .story-portrait,.venue.is-revealed .venue-photo{animation:none!important;transform:none!important}.glimmer-field i{animation:none!important;opacity:.48}.glimmer-field b,.glimmer-field::after{display:none!important}.scroll-cue svg,.petal-drift i{animation:none!important;opacity:.3;transform:none}.family-invitation.is-revealed .date-card strong,.family-invitation.is-revealed .invitation-inner:after,.family-invitation.is-revealed .invitation-inner,.family-invitation.is-revealed .invitation-inner>*{animation:none!important;opacity:1;transform:none}.family-invitation .invitation-inner:after{clip-path:inset(0)}.story-photo:before{opacity:1}.story-photo figcaption{opacity:1;transform:none;transition:none}.gallery-open:after{display:none}.sharing-status:not(:empty){animation:none}}

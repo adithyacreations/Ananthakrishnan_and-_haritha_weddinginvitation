@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+:root{--maroon:#612d38;--antique-gold:#a7894f}
+.hero h1{display:flex;flex-direction:column;align-items:center;gap:0;font:400 clamp(43px,6.2vw,84px)/1.04 'Parisienne',var(--serif);letter-spacing:0;margin:16px auto 0;max-width:min(900px,100%);text-wrap:balance}
+.hero h1 .hero-name{display:block;max-width:100%;font:inherit;line-height:1.04;white-space:normal;animation:word-arrive .8s both}
+.hero h1 .hero-name:last-child{animation-delay:.12s}
+.hero h1 em{display:block;padding:.04em 0;font:italic 300 .36em var(--serif);line-height:1;color:#e3c986}
+.family-invitation{padding:clamp(86px,10vw,132px) 22px;background:radial-gradient(ellipse at center,rgba(255,255,255,.82),transparent 72%),#f2ead9}
+.family-invitation:before,.family-invitation:after{color:rgba(97,45,56,.12);top:50%;transform:translateY(-50%);font-size:clamp(105px,15vw,190px)}
+.family-invitation .invitation-inner{width:min(850px,100%);max-width:850px;padding:clamp(36px,6vw,70px) clamp(23px,7vw,84px);border:1px solid rgba(167,137,79,.72);outline:1px solid rgba(167,137,79,.25);outline-offset:7px;background:rgba(249,245,235,.82);box-shadow:0 18px 55px rgba(64,42,30,.075)}
+.family-invitation .invitation-inner:before{content:'❧';position:absolute;top:13px;left:50%;transform:translateX(-50%);color:var(--antique-gold);font:24px var(--serif)}
+.family-invitation .eyebrow{color:var(--maroon)}
+.family-invitation h2{color:var(--maroon);font-size:clamp(38px,5vw,59px);margin:19px 0 0}
+.family-invitation h2 em{color:#9b7840;font-style:italic}
+.family-invitation .invitation-message{max-width:610px;margin:24px auto 30px;color:#53463c;font-size:clamp(16px,1.9vw,19px);line-height:1.85}
+.invitation-family-pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(12px,3vw,30px);margin:25px auto 0;padding:25px 0;border-block:1px solid rgba(167,137,79,.38)}
+.invitation-family-pair:before{content:'✳';grid-column:2;grid-row:1;color:var(--antique-gold);font-size:13px}
+.invitation-family{display:flex;min-width:0;flex-direction:column;align-items:center;gap:5px;color:#4e292f;font-family:var(--serif)}
+.invitation-family:first-child{grid-column:1;grid-row:1}.invitation-family:last-child{grid-column:3;grid-row:1}
+.invitation-family-label{margin-bottom:5px;color:#907443;font:8px 'DM Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.invitation-family strong{font-size:clamp(15px,2vw,19px);font-weight:500;text-align:center}
+.invitation-family-relation{margin:1px 0;color:#75654b;font:italic 13px var(--serif)}
+.invitation-family-address{max-width:270px;margin-top:7px;color:#746c60;font:12px/1.6 'DM Sans',sans-serif;text-align:center}
+.family-invitation .date-card{margin-top:31px;border-color:rgba(97,45,56,.34)}
+.family-invitation .date-card strong{color:var(--maroon);font-size:clamp(24px,3.5vw,32px);letter-spacing:.12em}
+.family-invitation .date-card>span:last-child{color:#665d50}
+.invitation-ornament{margin-top:23px;color:#a7894f;font:16px var(--serif);letter-spacing:.12em}
+.side-note{color:#8f7542}
+.wedding-events-heading h2{color:var(--maroon)}
+.wedding-event-card{border-color:rgba(117,61,68,.29);background:rgba(250,247,239,.84)}
+.wedding-event-card:before{border-color:rgba(117,61,68,.13)}
+.wedding-event-card h3{color:var(--maroon)}
+.wedding-event-number,.event-detail-line svg{color:#967443}
+.guest-guidance{background:#e9dfd1}
+.guest-card h2{color:var(--maroon)}
+.guest-contacts{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.guest-contacts address{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px;border:1px solid rgba(167,137,79,.3);color:#62584d;font:12px/1.6 'DM Sans',sans-serif;font-style:normal;overflow-wrap:anywhere}
+.guest-contacts address strong{color:var(--maroon);font:500 16px/1.4 var(--serif)}
+.guest-contacts address span{color:#746c60}
+.guest-contacts address div{display:flex;flex-wrap:wrap;gap:10px}
+.guest-contacts a{color:#755331;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){
+ .hero h1{font-size:clamp(39px,10.6vw,57px);line-height:1.06}
+ .hero h1 .hero-name{line-height:1.06}
+ .family-invitation{padding-inline:23px}
+ .family-invitation .invitation-inner{padding:36px 19px 29px}
+ .invitation-family-pair{grid-template-columns:1fr;gap:19px;padding:20px 0}
+ .invitation-family-pair:before{grid-column:1;grid-row:2;justify-self:center}
+ .invitation-family:first-child{grid-column:1;grid-row:1}.invitation-family:last-child{grid-column:1;grid-row:3}
+ .guest-contacts{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.hero h1 .hero-name{animation:none}}

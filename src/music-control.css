@@ -1,0 +1,9 @@
+.music-dock{position:fixed;z-index:20;right:clamp(16px,3vw,34px);bottom:clamp(16px,3vh,28px);display:flex;align-items:center;gap:13px;padding:7px 14px 7px 8px;border:1px solid rgba(216,192,132,.56);border-radius:999px;background:rgba(14,48,39,.92);color:#f5efdf;box-shadow:0 8px 28px rgba(9,27,22,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.music-dock .music-toggle{display:flex;align-items:center;justify-content:center;gap:9px;min-height:38px;padding:0 12px;border:0;border-radius:999px;background:transparent;color:#f6efdc;cursor:pointer;font:500 9px 'DM Sans',sans-serif;letter-spacing:.13em;text-transform:uppercase;transition:background-color .2s ease,color .2s ease}
+.music-dock .music-toggle:hover,.music-dock .music-toggle:focus-visible{background:rgba(219,195,133,.16);color:#f1d796}.music-dock .music-toggle:focus-visible{outline:2px solid #e5cf94;outline-offset:3px}
+.music-dock.is-playing .music-toggle{color:#efd58f}.music-dock.is-loading .music-toggle svg{animation:music-spin 1.1s linear infinite}.music-dock.is-error{border-color:rgba(214,166,135,.7)}.music-dock.is-error .music-toggle{color:#edc3a5}
+.music-status{padding-left:12px;border-left:1px solid rgba(219,195,133,.28);color:rgba(244,237,220,.76);font:italic 12px var(--serif);white-space:nowrap}
+@keyframes music-spin{to{transform:rotate(360deg)}}
+@media(max-width:720px){.music-dock{right:12px;bottom:12px;gap:9px;padding:5px 10px 5px 5px}.music-dock .music-toggle{min-height:37px;padding-inline:10px;font-size:8px}.music-status{font-size:11px;padding-left:9px}}
+@media(max-width:380px){.music-status{max-width:120px;white-space:normal;line-height:1.15}}
+@media(prefers-reduced-motion:reduce){.music-dock .music-toggle,.music-dock.is-loading .music-toggle svg{animation:none;transition:none}}

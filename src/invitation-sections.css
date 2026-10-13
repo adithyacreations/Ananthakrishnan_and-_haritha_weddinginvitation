@@ -1,0 +1,51 @@
+.couple-story{position:relative;display:grid;grid-template-columns:minmax(260px,.78fr) minmax(0,1fr);align-items:center;gap:clamp(44px,8vw,116px);padding:120px clamp(30px,10vw,150px);background:linear-gradient(135deg,#f7f2e8,#eee6d6);overflow:hidden}
+.couple-story:before{content:"";position:absolute;inset:22px;border:1px solid rgba(173,143,83,.23);pointer-events:none}
+.couple-story-copy{position:relative;z-index:1;max-width:440px}.couple-story-copy .floral-divider{justify-content:flex-start;margin:22px 0}
+.couple-story h2{margin:0;color:var(--green);font:400 clamp(43px,5.3vw,67px)/.95 var(--serif);letter-spacing:-.025em}.couple-story h2 em{color:#9c8048;font-weight:300}
+.couple-story-names{display:flex;align-items:center;gap:15px;margin:27px 0 20px;color:var(--green);font:400 17px var(--serif)}.couple-story-names i{font-style:normal;font-size:11px;color:var(--gold)}
+.couple-story-paragraph{max-width:400px;margin:11px 0;color:#686f65;font:300 15px/1.8 var(--serif)}
+.story-photos{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(13px,2vw,28px);min-width:0}
+.story-photo{position:relative;margin:0;min-width:0;background:#d8cfbb;box-shadow:0 18px 42px rgba(41,40,26,.12)}
+.story-photo-bride,.story-photo-groom{height:clamp(380px,42vw,555px)}
+.story-portrait{display:block;width:100%;height:100%;object-fit:cover}
+.story-photo-bride .story-portrait{object-position:50% 38%}.story-photo-groom .story-portrait{object-position:65% 29%}
+.story-photo figcaption{position:absolute;inset:auto 0 0;padding:40px 18px 17px;color:#fff9ee;background:linear-gradient(transparent,rgba(9,33,26,.72));font:italic 15px var(--serif)}
+.story-photo figcaption span{display:block;margin-top:4px;font:8px 'DM Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#e7d39e}
+.countdown{position:relative;overflow:hidden;text-align:center;padding:78px 25px 83px;color:var(--ivory);background:radial-gradient(ellipse at 50% 100%,rgba(195,160,91,.12),transparent 48%),var(--green)}
+.countdown:before,.countdown:after{content:'✳';position:absolute;top:50%;transform:translateY(-50%);color:rgba(214,191,135,.17);font-size:clamp(80px,14vw,175px);font-family:var(--serif)}.countdown:before{left:3vw}.countdown:after{right:3vw}
+.countdown>.eyebrow{color:#e2d1a2}.countdown>.floral-divider{margin:18px auto}.countdown h2{margin:0;color:#f6f0e3;font:400 clamp(34px,4.4vw,53px)/1.05 var(--serif)}
+.countdown-units{position:relative;z-index:1;display:flex;justify-content:center;gap:clamp(12px,4vw,55px);margin:34px auto 0}
+.countdown-unit{display:flex;min-width:70px;flex-direction:column;gap:7px}.countdown-unit strong{font:300 clamp(38px,6.2vw,72px)/.9 var(--serif);font-variant-numeric:tabular-nums;color:#e6ce90}.countdown-unit span{color:rgba(246,240,227,.78);font-size:8px;letter-spacing:.2em;text-transform:uppercase}
+.countdown-local-time{margin:24px 0 0;color:rgba(246,240,227,.66);font-size:9px;letter-spacing:.1em}.countdown-complete{position:relative;z-index:1;margin:30px 0 0;color:#ead59a;font:italic 20px var(--serif)}
+.wedding-events{padding:112px clamp(26px,8vw,120px) 124px;background:radial-gradient(ellipse at center,rgba(255,255,255,.72),transparent 62%),var(--ivory);transition:box-shadow 1s ease}
+.wedding-events-heading{max-width:650px;margin:0 auto 48px;text-align:center}.wedding-events-heading>.floral-divider{margin:19px auto}.wedding-events-heading h2{margin:0;color:var(--green);font:400 clamp(42px,5.4vw,65px)/.95 var(--serif)}
+.wedding-events-heading>p:not(.eyebrow){max-width:490px;margin:17px auto;color:#697168;font:300 15px/1.7 var(--serif)}
+.wedding-event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1160px;margin:auto}
+.wedding-event-card{position:relative;min-width:0;padding:27px 23px 28px;border:1px solid rgba(173,143,83,.42);background:rgba(250,247,239,.76);box-shadow:0 11px 30px rgba(55,47,26,.04)}
+.wedding-event-card:before{content:"";position:absolute;inset:6px;border:1px solid rgba(173,143,83,.16);pointer-events:none}
+.wedding-event-number{color:#a38953;font:italic 14px var(--serif)}.wedding-event-card h3{position:relative;margin:17px 0 19px;color:var(--green);font:400 27px/1.05 var(--serif)}
+.event-detail-line{display:flex;align-items:flex-start;gap:9px;margin:10px 0;color:#59665d;font-size:10px;line-height:1.5}.event-detail-line svg{flex:none;color:#a98d53}
+.wedding-event-description{margin:17px 0 0;padding-top:14px;border-top:1px solid rgba(173,143,83,.26);color:#73766d;font:300 13px/1.7 var(--serif)}
+.venue{min-height:470px}.venue-image{background:#d6d1c3}.venue-image>.venue-photo{filter:saturate(.85)}
+.venue-copy{position:relative}.venue-copy:before{content:"";position:absolute;inset:22px;border:1px solid rgba(173,143,83,.28);pointer-events:none}
+.venue-copy h2{font-size:clamp(38px,4.6vw,54px);line-height:1}.venue-copy>p:not(.eyebrow){max-width:360px;line-height:1.65}.venue-copy>a{display:inline-flex;align-items:center;gap:8px}
+.guest-guidance{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:88px clamp(26px,8vw,120px);background:#eae2d2}
+.guest-card{position:relative;padding:32px clamp(24px,4vw,50px);border:1px solid rgba(173,143,83,.42);background:#f6f0e5}
+.guest-card:before{content:"";position:absolute;inset:6px;border:1px solid rgba(173,143,83,.16);pointer-events:none}
+.guest-card>.eyebrow,.guest-card>.floral-divider,.guest-card h2,.guest-card>p,.guest-details{position:relative}
+.guest-card .floral-divider{justify-content:flex-start;margin:14px 0}.guest-card h2{margin:0 0 16px;color:var(--green);font:400 35px var(--serif)}
+.guest-card>p:not(.eyebrow){margin:8px 0;color:#697168;font:300 14px/1.7 var(--serif)}.guest-card .guest-note{color:#948052}
+.guest-details{margin:0}.guest-details>div{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:12px 0;border-top:1px solid rgba(173,143,83,.22)}
+.guest-details dt{color:#957b49;font-size:8px;letter-spacing:.15em;text-transform:uppercase}.guest-details dd{margin:0;color:#697168;font:300 14px/1.6 var(--serif)}
+.guest-contacts{position:relative;margin-top:18px;padding-top:10px;border-top:1px solid rgba(173,143,83,.22);font-style:normal}.guest-contacts p{margin:7px 0;color:#697168;font:300 13px/1.6 var(--serif)}.guest-contacts a{color:#806b3f;text-decoration:underline;text-underline-offset:3px}
+.family-names span{max-width:45%;overflow-wrap:anywhere}
+@media(max-width:760px){
+ .couple-story{grid-template-columns:1fr;gap:31px;padding:85px 29px 94px}.couple-story:before{inset:12px}.couple-story-copy{max-width:600px}.couple-story h2{font-size:clamp(43px,10vw,59px)}
+ .story-photos{max-width:560px;margin:auto;width:100%;gap:13px}.story-photo-bride,.story-photo-groom{height:clamp(305px,75vw,450px)}
+ .countdown{padding:69px 18px 72px}.countdown:before{left:-7vw}.countdown:after{right:-7vw}.countdown-units{gap:clamp(7px,3vw,23px)}.countdown-unit{min-width:60px}.countdown-unit span{font-size:7px;letter-spacing:.14em}
+ .wedding-events{padding:83px 24px 90px}.wedding-event-grid{grid-template-columns:1fr;max-width:520px;gap:13px}.wedding-event-card{padding:23px}.wedding-event-card h3{margin:11px 0 15px}
+ .guest-guidance{grid-template-columns:1fr;padding:68px 24px;gap:14px}.venue{grid-template-columns:1fr}.venue-image{min-height:330px}.venue-copy{padding:64px 35px 78px}
+}
+@media(max-width:520px){.family-names{flex-direction:column;gap:7px}.family-names span{max-width:100%}.family-names b{font-size:12px}}
+@media(max-width:420px){.countdown-unit{min-width:50px}.countdown-unit strong{font-size:38px}.countdown-local-time{font-size:8px}.story-photo figcaption{padding-inline:10px;font-size:13px}.story-photo figcaption span{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.couple-story-copy,.story-photo,.wedding-event-card,.wedding-events{transition:none!important}}
