@@ -24,6 +24,8 @@
 .nilavilakku-art{position:relative;z-index:1;width:min(100%,340px);height:auto;overflow:visible;filter:drop-shadow(0 20px 24px rgba(0,0,0,.25))}
 .flame-shape,.flame-core,.flame-aura{opacity:0;transform-origin:140px 80px;transition:opacity .55s ease}
 .flame-shape{transform:scale(.72)}.flame-core{transform:scale(.65);transition-delay:.08s}.flame-aura{transform:scale(.8);transition-delay:.04s}
+.nilavilakku.unlit .flame-shape,.nilavilakku.unlit .flame-core,.nilavilakku.unlit .flame-aura{opacity:0!important;animation:none!important}
+.nilavilakku.unlit .lamp-halo{opacity:.2;transform:scale(.78)}.nilavilakku.unlit .lamp-halo:before{opacity:0}
 .is-lit .flame-shape,.is-lit .flame-core,.is-lit .flame-aura{opacity:1;animation:flame-flicker 2.8s ease-in-out infinite alternate}
 .is-lit .flame-core{animation-duration:2.1s}.is-lit .flame-aura{opacity:.8;filter:blur(2px);animation-name:glow-breathe;animation-duration:3.5s}
 .lit .lamp-halo{opacity:1;transform:scale(1.15);background:radial-gradient(circle,rgba(250,196,95,.22),rgba(233,177,80,.09) 38%,transparent 72%)}

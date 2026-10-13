@@ -44,7 +44,7 @@ export function NilavilakkuExperience() {
   const [lit, setLit] = useState(false)
   const reduceMotion = useReducedMotion()
   return <motion.section
-    className={`nilavilakku${lit ? ' lit' : ''}`}
+    className={`nilavilakku${lit ? ' lit' : ' unlit'}`}
     aria-labelledby="nilavilakku-heading"
     initial={reduceMotion ? false : { opacity: 0, y: 18 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export function NilavilakkuExperience() {
       <FloralDivider />
       <h2 id="nilavilakku-heading">{wedding.nilavilakku.titleLine1}<br /><em>{wedding.nilavilakku.titleLine2}</em></h2>
       <p className="lamp-invitation">{wedding.nilavilakku.invitation}</p>
-      <button className="lamp-action" type="button" aria-pressed={lit} onClick={() => setLit((current) => !current)}>
+      <button className="lamp-action" type="button" aria-pressed={lit} onClick={() => setLit(true)}>
         <span className="lamp-action-mark" aria-hidden="true">{lit ? '✦' : '✧'}</span>
         {lit ? wedding.nilavilakku.litAction : wedding.nilavilakku.action}
       </button>

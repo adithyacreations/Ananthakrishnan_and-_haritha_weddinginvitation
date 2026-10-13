@@ -58,20 +58,30 @@ export function MusicToggle() {
   }, [play])
 
   useEffect(() => {
-    // Most browsers require a real user gesture before audible playback. Start
-    // on the first interaction anywhere in the invitation, then remove listeners.
+    // Mobile browsers commonly block audible autoplay. Retry directly from the
+    // next trusted interaction; retain listeners until playback really starts
+    // because some mobile browsers reject touchstart but accept touchend/click.
     const startAfterGesture = (event: Event) => {
       if ((event.target as Element | null)?.closest?.('.music-toggle')) return
       if (stateRef.current !== 'blocked') return
       void play()
-      window.removeEventListener('pointerdown', startAfterGesture, true)
-      window.removeEventListener('keydown', startAfterGesture, true)
     }
     window.addEventListener('pointerdown', startAfterGesture, true)
+    window.addEventListener('pointerup', startAfterGesture, true)
+    // Keep touchstart as a fallback for mobile browsers without Pointer Events.
+    window.addEventListener('touchstart', startAfterGesture, { capture: true, passive: true })
+    window.addEventListener('touchend', startAfterGesture, { capture: true, passive: true })
+    window.addEventListener('wheel', startAfterGesture, { capture: true, passive: true })
     window.addEventListener('keydown', startAfterGesture, true)
+    window.addEventListener('click', startAfterGesture, true)
     return () => {
       window.removeEventListener('pointerdown', startAfterGesture, true)
+      window.removeEventListener('pointerup', startAfterGesture, true)
+      window.removeEventListener('touchstart', startAfterGesture, true)
+      window.removeEventListener('touchend', startAfterGesture, true)
+      window.removeEventListener('wheel', startAfterGesture, true)
       window.removeEventListener('keydown', startAfterGesture, true)
+      window.removeEventListener('click', startAfterGesture, true)
     }
   }, [play])
 
