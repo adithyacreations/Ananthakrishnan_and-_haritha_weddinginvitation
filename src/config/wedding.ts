@@ -1,17 +1,25 @@
 /** All invitation copy and personal details live here for easy updating. */
+const couple = { bride: 'Dr Haritha', groom: 'Anandha Krihsnan' } as const
+const couplePhoto = '/images/couple-hero.png'
+const bridePhoto = '/images/HARITHA.jpeg'
+const groomPhoto = '/images/PODI.jpeg'
+const photoAlt = {
+  couple: `${couple.groom} and ${couple.bride} together in Kerala wedding attire.`,
+  bride: `${couple.bride} smiling in a black and white saree.`,
+  groom: `${couple.groom} wearing sunglasses, a red patterned shirt and a cream mundu.`,
+}
+
 export const wedding = {
   monogram: { brideInitial: 'H', groomInitial: 'A', separator: '✳' },
-  couple: { bride: 'Dr. Haritha Harikumar', groom: 'Anantha Krishnan K' },
+  couple,
   families: {
     bride: {
       heading: "Bride's family",
-      relation: 'D/o',
       parents: ['Mr. Harikumar G', 'Mrs. Ambili K'],
       address: 'Santham, Melila P.O., Kunnicode',
     },
     groom: {
       heading: "Groom's family",
-      relation: '',
       parents: ['Mr. Krishnakumar T', 'Mrs. Preetha S'],
       address: 'Santhamandhiram, Melila P.O., Kunnicode',
     },
@@ -28,26 +36,64 @@ export const wedding = {
     countdownComplete: 'The Thaali Kettu has taken place. Thank you for sharing in this blessed celebration.',
   },
   opening: {
-    kicker: 'Together with their families',
-    invitationLine: 'cordially invite you to celebrate their wedding',
+    kicker: 'Together with our families',
+    invitationLine: 'We warmly invite you to celebrate our wedding.',
     openButton: 'Open the invitation',
     scrollLabel: 'Made with love in Kerala',
+    illustration: {
+      src: '/images/artwork/wedding-cover.jpeg',
+      width: 1600,
+      height: 1392,
+      alt: `Wedding illustration of ${couple.groom} and ${couple.bride} in traditional attire.`,
+    },
   },
   closingMessage: 'Your presence and blessings are our greatest gift.',
+  artwork: {
+    enabled: true,
+    // Supplied artwork, encoded as lightweight WebP. Source PNGs are preserved
+    // in /artwork-sources; illustrations are separate from the family album.
+    images: {
+      bananaKasavu: { src: '/images/artwork/banana-kasavu.webp', width: 1199, height: 1501, alt: 'Banana leaves, kasavu drapery and traditional brass decorations.' },
+      kathakali: { src: '/images/artwork/kathakali.webp', width: 736, height: 1104, alt: 'A colourful watercolor illustration of a Kerala Kathakali dancer.' },
+      weddingSteps: { src: '/images/artwork/wedding-steps.webp', width: 880, height: 1205, alt: 'Painted wedding footsteps framed by marigolds, bells and banana leaves.' },
+      celebration: { src: '/images/artwork/wedding-celebration.webp', width: 1152, height: 2048, alt: 'An illustrated Kerala wedding with garlands, musicians and a floral pookalam.' },
+      lamps: { src: '/images/artwork/lamps-and-flowers.webp', width: 577, height: 1054, alt: 'Watercolor brass lamps surrounded by banana leaves and bowls of flowers.' },
+      mandap: { src: '/images/artwork/wedding-mandap.webp', width: 736, height: 736, alt: 'A traditional carved wooden wedding mandap decorated with jasmine and leaves.' },
+    },
+    heritage: {
+      eyebrow: 'From the heart of Kerala',
+      title: 'Rooted in tradition.',
+      titleEmphasis: 'Made for a lifetime.',
+      introduction: 'The rustle of banana leaves. The fragrance of jasmine. A beginning wrapped in the warmth of home.',
+      exploreLabel: 'Explore the traditions',
+      previousLabel: 'Previous illustration',
+      nextLabel: 'Next illustration',
+      scenes: [
+        { image: 'kathakali', label: 'The colours of Kerala', caption: 'A little colour. A lot of heart.' },
+        { image: 'mandap', label: 'An auspicious beginning', caption: 'Where love and blessings meet.' },
+        { image: 'weddingSteps', label: 'Steps into forever', caption: 'Two paths. One beautiful journey.' },
+      ],
+    },
+    backwaters: {
+      eyebrow: 'Carried by love and blessings',
+      title: 'Let the celebrations flow.',
+      caption: 'A little of Kerala, a lifetime of togetherness.',
+    },
+  },
   familyInvitation: {
-    eyebrow: 'With the blessings of their families',
+    eyebrow: 'With the blessings of our families',
     title: 'A joyful invitation',
     titleEmphasis: 'to celebrate together',
-    wording: 'Mr. Krishnakumar T and Mrs. Preetha S cordially invite you to celebrate the wedding of their son, Anantha Krishnan K, with Dr. Haritha Harikumar, daughter of Mr. Harikumar G and Mrs. Ambili K. Your presence and blessings are our greatest gift.',
+    wording: 'We warmly invite you to our wedding. It would mean so much to share this day with you and receive your blessings as we begin our life together.',
     saveTheDate: 'Thaali Kettu',
   },
   coupleStory: {
     eyebrow: 'A celebration of two families',
     title: 'With joy,',
-    titleEmphasis: 'they begin together.',
+    titleEmphasis: 'we begin together.',
     paragraphs: [
-      'Their families joyfully invite you to share in the wedding celebrations of Dr. Haritha Harikumar and Anantha Krishnan K.',
-      'The journey to Guruvayoor begins on 9 December, followed by the Thaali Kettu the next morning.',
+      'We are so happy to share our wedding celebrations with the people we love.',
+      'Our journey to Guruvayoor begins on 9 December, followed by the Thaali Kettu the next morning.',
     ],
     brideCaption: 'The bride',
     groomCaption: 'The groom',
@@ -60,15 +106,15 @@ export const wedding = {
   nilavilakku: {
     eyebrow: 'An auspicious beginning',
     titleLine1: 'A light for',
-    titleLine2: 'the life ahead.',
+    titleLine2: 'our life ahead.',
     invitation: 'Join us in lighting the nilavilakku, a prayer for a bright and blessed beginning.',
     action: 'Light the Nilavilakku',
     litAction: 'The lamp is lit',
     prompt: 'A small gesture, with a heartfelt blessing.',
-    blessing: 'May this light bless the beginning of their life together.',
+    blessing: 'May this light bless the beginning of our life together.',
   },
   events: {
-    eyebrow: 'The wedding celebrations',
+    eyebrow: 'Our wedding celebrations',
     title: 'A journey, a blessing, a beginning.',
     introduction: 'We look forward to sharing these auspicious moments with you.',
     items: [
@@ -104,24 +150,24 @@ export const wedding = {
   },
   dressCode: { enabled: false, eyebrow: '', title: '', description: '', note: '' },
   guestInformation: {
-    enabled: true,
+    enabled: false,
     eyebrow: 'For our dear guests',
     title: 'Family contacts',
   },
   gallery: {
     eyebrow: 'A few moments together',
-    title: 'The family album',
+    title: 'Our family album',
     introduction: 'A glimpse of the people and moments we hold close.',
     items: [
-      { src: '/images/couple-hero.png', alt: 'Anantha Krishnan K and Dr. Haritha Harikumar together in Kerala wedding attire.', caption: 'Together', objectPosition: '50% 46%', orientation: 'landscape' },
-      { src: '/images/bride-portrait.png', alt: 'Dr. Haritha Harikumar in traditional Kerala wedding attire.', caption: 'The bride', objectPosition: '50% 38%', orientation: 'portrait' },
-      { src: '/images/groom-portrait.png', alt: 'Anantha Krishnan K in traditional Kerala wedding attire.', caption: 'The groom', objectPosition: '65% 29%', orientation: 'landscape' },
+      { src: couplePhoto, alt: photoAlt.couple, caption: 'Together', objectPosition: '50% 46%', orientation: 'landscape' },
+      { src: bridePhoto, alt: photoAlt.bride, caption: 'The bride', objectPosition: '50% 38%', orientation: 'portrait' },
+      { src: groomPhoto, alt: photoAlt.groom, caption: 'The groom', objectPosition: '50% 29%', orientation: 'portrait' },
     ],
   },
   sharing: {
     eyebrow: 'Share the joy',
     title: 'Pass the invitation along.',
-    message: 'We would be delighted if you joined us for the wedding of Anantha Krishnan K and Dr. Haritha Harikumar on 10 December 2026.',
+    message: 'We would be delighted if you joined us to celebrate our wedding on 10 December 2026.',
     deployedUrl: '',
     whatsappLabel: 'Share on WhatsApp',
     copyLabel: 'Copy invitation link',
@@ -134,7 +180,7 @@ export const wedding = {
     enabled: false,
     eyebrow: 'Kindly reply',
     title: 'Will you join us?',
-    introduction: 'Please let the families know if you can attend.',
+    introduction: 'Please let us know if you can attend.',
     submissionUrl: '',
     demoNotice: 'RSVP preview only: no response will be sent or saved. Connect a submission service and add its URL in wedding.ts before enabling this form for guests.',
     nameLabel: 'Your name',
@@ -150,14 +196,10 @@ export const wedding = {
     errorMessage: 'Your RSVP could not be sent. Please try again later or contact the family.',
   },
   images: {
-    hero: '/images/couple-hero.png',
-    bride: '/images/bride-portrait.png',
-    groom: '/images/groom-portrait.png',
-    alt: {
-      hero: 'Anantha Krishnan K and Dr. Haritha Harikumar together in Kerala wedding attire.',
-      bride: 'Dr. Haritha Harikumar in traditional Kerala wedding attire.',
-      groom: 'Anantha Krishnan K in traditional Kerala wedding attire.',
-    },
+    couple: couplePhoto,
+    bride: bridePhoto,
+    groom: groomPhoto,
+    alt: photoAlt,
   },
   music: '/audios/kerala-wedding-music.mp3',
   musicControl: {

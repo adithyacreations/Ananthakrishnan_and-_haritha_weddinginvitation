@@ -15,9 +15,33 @@ Create a production build with `npm run build`; preview it with `npm run preview
 
 ## Personalize
 
+### Kerala artwork and movement
+
+The supplied artwork is integrated into the invitation margins, the illustrated
+traditions section, and the wedding schedule. On phones, the illustrated cards
+stack vertically for normal page scrolling. Illustrations move
+gently as the page scrolls; jasmine tassels sway and the backwater boat drifts.
+The operating system's **Reduce motion** preference disables these movements.
+
+Edit `artwork` in `src/config/wedding.ts` to change all illustration paths,
+descriptions, captions, and section wording. Set `artwork.enabled` to `false`
+to hide the decorative artwork sections. The cover is configured separately in
+`opening.illustration`. It uses `images/artwork/wedding-cover.jpeg` and crops
+below the printed lettering so the names and date come from the live page text.
+The story portraits use `images/HARITHA.jpeg` and `images/PODI.jpeg`.
+
+Original supplied PNGs are preserved in `artwork-sources/`. The six displayed
+illustrations are optimized WebP files in `images/artwork/` (under 0.9 MB total)
+and are lazy loaded. Duplicate attachments were stored once. The boat reference
+has a baked-in checkerboard and watermark, so the page uses an original SVG boat
+instead. The existing couple portraits and MP3 have not been modified.
+
+Root-level `images/` and `audios/` folders are served by the Vite asset plugin
+in development and copied into `dist/` during the production build.
+
 Edit [`src/config/wedding.ts`](src/config/wedding.ts) to update the couple and family names, addresses and phone numbers, invitation copy, story text, date and timezone, event schedule, venue, optional guest sections, photographs, and music path. Optional dress-code and guest-information sections can be enabled or disabled in this file.
 
-The gallery reads from `gallery.items` in the same configuration. Add an item with a real local `/images/...` path, useful alt text, a short caption, an object position, and its `landscape` or `portrait` orientation. The gallery filters out images that fail to load. Its lightbox supports Escape, the arrow keys, and Tab navigation.
+The family album section is no longer rendered in `App.tsx`. Its reusable gallery component and configuration remain available if needed later. Family contacts are hidden with `guestInformation.enabled: false`.
 
 Guest sharing uses `sharing.message` and `sharing.deployedUrl`. Set `deployedUrl` to the public invitation URL before publishing; when it is empty, the current website URL is used. The WhatsApp action opens a composed message for the guest to review and send; copying the URL reports success or failure based on the browser clipboard result.
 
@@ -27,14 +51,14 @@ The countdown targets **6:00 AM IST on 10 December 2026**. The marriage ceremony
 
 The existing local assets are referenced directly:
 
-- `images/bride-portrait.png`
+- `images/HARITHA.jpeg`
 - `images/couple-hero.png`
-- `images/groom-portrait.png`
+- `images/PODI.jpeg`
 - `audios/kerala-wedding-music.mp3`
 
 Vite serves the root-level asset folders at `/images/...` and `/audios/...` during development and includes them in `dist` during builds without moving or changing the originals. The player attempts audible playback when the page opens and again when a guest chooses “Open the Invitation.” Browsers may block audible autoplay until a visitor interacts; the floating control remains available to play or pause music.
 
-The opening scene uses a staggered photo, border, text, gold-dust, and jasmine-petal reveal. Portraits, invitation details, gallery images, and event cards reveal as guests scroll. Decorative section glimmers pause when their section leaves view, and motion is simplified for reduced-motion preferences and small screens.
+The illustrated cover has a soft text reveal. Portraits, invitation details, and event cards reveal as guests scroll. Decorative glimmers pause off screen, and the page respects reduced-motion preferences.
 
 ## Deploy
 

@@ -3,6 +3,7 @@ import { wedding } from '../config/wedding'
 import { GlimmerField } from './GlimmerField'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { PetalDrift } from './PetalDrift'
+import { GarlandCanopy, ScrollArtwork } from './KeralaArtwork'
 
 const families = [wedding.families.groom, wedding.families.bride]
 
@@ -12,6 +13,11 @@ export function FamilyInvitation() {
   return <section ref={revealRef} data-scroll-reveal className="invitation family-invitation" id="story" aria-labelledby="family-invitation-title">
     <GlimmerField variant="invitation" />
     <PetalDrift variant="closing" />
+    <GarlandCanopy className="invitation-garland" />
+    {wedding.artwork.enabled && <>
+      <ScrollArtwork image="lamps" className="invitation-art invitation-art-left" distance={36} />
+      <ScrollArtwork image="bananaKasavu" className="invitation-art invitation-art-right" distance={-30} />
+    </>}
     <div className="invitation-inner">
       <p className="eyebrow">{copy.eyebrow}</p>
       <FloralDivider />
@@ -20,7 +26,6 @@ export function FamilyInvitation() {
       <div className="invitation-family-pair">
         {families.map((family) => <div className="invitation-family" key={family.heading}>
           <span className="invitation-family-label">{family.heading}</span>
-          {family.relation && <span className="invitation-family-relation">{family.relation}</span>}
           {family.parents.map((parent) => <strong key={parent}>{parent}</strong>)}
           <span className="invitation-family-address">{family.address}</span>
         </div>)}

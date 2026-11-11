@@ -4,6 +4,7 @@ import { wedding } from '../config/wedding'
 import { FloralDivider } from './FloralDivider'
 import { GlimmerField } from './GlimmerField'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { ScrollArtwork, LotusOrnament } from './KeralaArtwork'
 
 type WeddingEvent = (typeof wedding.events.items)[number]
 
@@ -28,6 +29,13 @@ export function WeddingEvents() {
       <h2 id="wedding-events-title">{wedding.events.title}</h2>
       <p>{wedding.events.introduction}</p>
     </div>
-    <div className="wedding-event-grid">{wedding.events.items.map((event, index) => <WeddingEventCard key={`${event.title}-${index}`} event={event} index={index} reduceMotion={reduceMotion} />)}</div>
+    <div className={`celebrations-layout${wedding.artwork.enabled ? ' has-artwork' : ''}`}>
+      {wedding.artwork.enabled && <div className="celebrations-illustration">
+        <LotusOrnament />
+        <ScrollArtwork image="celebration" distance={24} decorative={false} />
+        <span className="celebrations-art-date">{wedding.date.shortDisplay}</span>
+      </div>}
+      <div className="wedding-event-grid">{wedding.events.items.map((event, index) => <WeddingEventCard key={`${event.title}-${index}`} event={event} index={index} reduceMotion={reduceMotion} />)}</div>
+    </div>
   </section>
 }

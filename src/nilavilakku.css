@@ -1,17 +1,17 @@
 .nilavilakku{
  position:relative;isolation:isolate;overflow:hidden;min-height:690px;padding:104px clamp(28px,10vw,150px);display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.82fr);align-items:center;gap:5vw;
- color:#f5f0e5;background:radial-gradient(ellipse at 73% 54%,rgba(183,130,53,.18),transparent 32%),linear-gradient(125deg,#0c3128,#17483a 52%,#0d3329);
+ color:#f5f0e5;background:radial-gradient(ellipse at 73% 54%,rgba(183,130,53,.18),transparent 32%),linear-gradient(125deg,var(--wine-deep),#76292a 52%,#45151b);
 }
-.nilavilakku:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.13;background:repeating-linear-gradient(90deg,transparent 0 39px,rgba(226,199,132,.09) 40px,transparent 41px),linear-gradient(180deg,transparent 77%,rgba(3,19,15,.66));pointer-events:none}
+.nilavilakku:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.13;background:repeating-linear-gradient(90deg,transparent 0 39px,rgba(226,199,132,.09) 40px,transparent 41px),linear-gradient(180deg,transparent 77%,rgba(39,9,13,.66));pointer-events:none}
 .nilavilakku:after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:linear-gradient(90deg,transparent,#c4a25c 18%,#f0dba3 50%,#c4a25c 82%,transparent);opacity:.65}
 .courtyard-arch{position:absolute;z-index:-1;inset:43px 8% 34px;border:1px solid rgba(202,169,102,.23);border-bottom:0;border-radius:48% 48% 0 0 / 25% 25% 0 0;pointer-events:none}
 .courtyard-arch:before{content:"";position:absolute;inset:20px 20px 0;border:1px solid rgba(202,169,102,.15);border-bottom:0;border-radius:48% 48% 0 0 / 25% 25% 0 0}
 .courtyard-arch i{position:absolute;bottom:0;width:16px;height:95%;background:linear-gradient(90deg,rgba(65,43,26,.3),rgba(187,145,76,.17),rgba(65,43,26,.3));border-inline:1px solid rgba(203,166,97,.18)}
 .courtyard-arch i:first-child{left:8%}.courtyard-arch i:nth-child(2){left:50%;transform:translateX(-50%)}.courtyard-arch i:last-child{right:8%}
 .lamp-copy{position:relative;z-index:1;max-width:440px}.lamp-copy .eyebrow{color:#d7c18c}.lamp-copy .floral-divider{justify-content:flex-start;margin:20px 0 25px}.lamp-copy h2{margin:0;color:#f8f2e7;font:400 clamp(44px,5.4vw,69px)/.91 var(--serif);letter-spacing:-.02em}.lamp-copy h2 em{color:#dbbf7f;font-weight:300}.lamp-invitation{max-width:370px;margin:22px 0 0;color:rgba(246,240,224,.78);font:300 15px/1.8 var(--serif)}
-.lamp-action{display:inline-flex;align-items:center;gap:13px;margin-top:29px;min-height:49px;padding:0 19px;border:1px solid rgba(218,194,133,.75);background:rgba(9,37,29,.2);color:#f5ecd6;font:500 9px 'DM Sans',sans-serif;letter-spacing:.19em;text-transform:uppercase;cursor:pointer;transition:color .25s ease,background-color .25s ease,border-color .25s ease,box-shadow .3s ease}
-.lamp-action:hover,.lamp-action:focus-visible{background:#d8c18a;color:#17392e;border-color:#e8d5a2}.lamp-action:focus-visible{outline:2px solid #f9ecc9;outline-offset:4px}.lamp-action-mark{font-size:17px;color:#dfc47e}
-.lit .lamp-action{background:#d9c28b;color:#193a2f;border-color:#ead9a6;box-shadow:0 0 23px rgba(247,201,102,.14)}
+.lamp-action{display:inline-flex;align-items:center;gap:13px;margin-top:29px;min-height:49px;padding:0 19px;border:1px solid rgba(218,194,133,.75);background:rgba(64,16,22,.2);color:#f5ecd6;font:500 9px 'DM Sans',sans-serif;letter-spacing:.19em;text-transform:uppercase;cursor:pointer;transition:color .25s ease,background-color .25s ease,border-color .25s ease,box-shadow .3s ease}
+.lamp-action:hover,.lamp-action:focus-visible{background:#d8c18a;color:var(--wine-deep);border-color:#e8d5a2}.lamp-action:focus-visible{outline:2px solid #f9ecc9;outline-offset:4px}.lamp-action-mark{font-size:17px;color:#dfc47e}
+.lit .lamp-action{background:#d9c28b;color:var(--wine-deep);border-color:#ead9a6;box-shadow:0 0 23px rgba(247,201,102,.14)}
 .lamp-status{min-height:18px;margin:14px 0 0;color:#d4c59d;font:italic 13px var(--serif);letter-spacing:.025em}
 .lamp-scene{position:relative;z-index:1;display:grid;place-items:center;min-height:485px;isolation:isolate}
 .lamp-halo{position:absolute;width:min(94%,440px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(236,177,79,.09),rgba(233,177,80,.035) 42%,transparent 72%);opacity:.55;transition:opacity .8s ease,transform .8s ease;transform:scale(.9)}
@@ -29,7 +29,7 @@
 .is-lit .flame-shape,.is-lit .flame-core,.is-lit .flame-aura{opacity:1;animation:flame-flicker 2.8s ease-in-out infinite alternate}
 .is-lit .flame-core{animation-duration:2.1s}.is-lit .flame-aura{opacity:.8;filter:blur(2px);animation-name:glow-breathe;animation-duration:3.5s}
 .lit .lamp-halo{opacity:1;transform:scale(1.15);background:radial-gradient(circle,rgba(250,196,95,.22),rgba(233,177,80,.09) 38%,transparent 72%)}
-.lamp-floor{position:absolute;z-index:-1;bottom:34px;width:min(90%,430px);height:1px;background:linear-gradient(90deg,transparent,rgba(218,183,109,.65),transparent);box-shadow:0 15px 30px 5px rgba(4,16,11,.38)}
+.lamp-floor{position:absolute;z-index:-1;bottom:34px;width:min(90%,430px);height:1px;background:linear-gradient(90deg,transparent,rgba(218,183,109,.65),transparent);box-shadow:0 15px 30px 5px rgba(29,7,10,.38)}
 .lamp-jasmine{position:absolute;z-index:1;width:100px;color:#cfb773;opacity:.68;pointer-events:none}.lamp-jasmine-left{left:5%;bottom:14%;transform:rotate(-8deg)}.lamp-jasmine-right{right:4%;top:18%;transform:rotate(12deg) scale(.78)}
 .courtyard-caption{position:absolute;right:clamp(26px,5vw,72px);bottom:28px;color:rgba(230,211,166,.64);font-size:8px;letter-spacing:.22em}
 .nilavilakku.lit+.wedding-events{box-shadow:inset 0 12px 30px rgba(191,153,73,.11)}

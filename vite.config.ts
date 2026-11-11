@@ -16,9 +16,10 @@ function weddingAssets(): Plugin {
         const folder = roots.find((name) => pathname.startsWith(`/${name}/`))
         if (!folder) return next()
         const root = path.resolve(process.cwd(), folder)
-        const file = path.resolve(root, pathname.slice(1))
+        const file = path.resolve(process.cwd(), pathname.slice(1))
         if (!file.startsWith(root + path.sep) || !existsSync(file) || !statSync(file).isFile()) return next()
-        res.setHeader('Content-Type', file.endsWith('.mp3') ? 'audio/mpeg' : 'image/png')
+        const contentTypes: Record<string, string> = { '.mp3': 'audio/mpeg', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg' }
+        res.setHeader('Content-Type', contentTypes[path.extname(file).toLowerCase()] ?? 'application/octet-stream')
         createReadStream(file).pipe(res)
       })
     },

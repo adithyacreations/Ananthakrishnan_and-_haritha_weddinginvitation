@@ -10,7 +10,7 @@ export function VenueSection() {
   const revealRef = useScrollReveal<HTMLElement>()
   return <section ref={revealRef} data-scroll-reveal className="venue" id="venue" aria-labelledby="venue-title">
     <GlimmerField variant="venue" />
-    <div className="venue-image"><WeddingImage className="venue-photo" src={wedding.images.hero} alt="" aria-hidden="true" fallbackLabel="Kerala wedding photograph" loading="lazy" decoding="async" /></div>
+    <div className="venue-image"><WeddingImage className="venue-photo" src={wedding.images.couple} alt="" aria-hidden="true" fallbackLabel="Kerala wedding photograph" loading="lazy" decoding="async" /></div>
     <div className="venue-copy">
       <p className="eyebrow">{venue.eyebrow}</p><FloralDivider /><MapPin size={18} strokeWidth={1.3} aria-hidden="true" />
       <h2 id="venue-title">{venue.name}</h2>

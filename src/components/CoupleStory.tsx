@@ -15,7 +15,7 @@ export function CoupleStory() {
       <p className="eyebrow">{story.eyebrow}</p>
       <FloralDivider />
       <h2 id="couple-story-title">{story.title}<br /><em>{story.titleEmphasis}</em></h2>
-      <div className="couple-story-names"><span>{wedding.couple.bride}</span><i>✳</i><span>{wedding.couple.groom}</span></div>
+      <div className="couple-story-names"><span>{wedding.couple.groom}</span><i>✳</i><span>{wedding.couple.bride}</span></div>
       {story.paragraphs.map((paragraph) => <p className="couple-story-paragraph" key={paragraph}>{paragraph}</p>)}
     </motion.div>
     <div className="story-photos" aria-label="Portraits of the couple">
