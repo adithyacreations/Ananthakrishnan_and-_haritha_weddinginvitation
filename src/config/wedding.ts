@@ -111,7 +111,7 @@ export const wedding = {
     titleLine2: 'our life ahead.',
     invitation: 'Join us in lighting the nilavilakku, a prayer for a bright and blessed beginning.',
     action: 'Light the Nilavilakku',
-    litAction: 'The lamp is lit',
+    litAction: 'Turn off the Nilavilakku',
     prompt: 'A small gesture, with a heartfelt blessing.',
     blessing: 'May this light bless the beginning of our life together.',
   },

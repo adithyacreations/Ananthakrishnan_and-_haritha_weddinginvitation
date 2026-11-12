@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowDown, ArrowRight } from 'lucide-react'
+import { ArrowDown } from 'lucide-react'
 import { wedding } from '../config/wedding'
 import { WeddingImage } from './WeddingImage'
 
@@ -17,16 +17,13 @@ export function InvitationCover() {
       <div className="cover-layout">
         <motion.div className="cover-copy" initial={reduceMotion ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reduceMotion ? 0 : .65, ease: 'easeOut' }}>
           <p className="cover-kicker">{opening.kicker}</p>
-          <h1 id="opening-title">
+          <h1 id="opening-title" tabIndex={-1}>
             <span>{couple.groom}</span>
             <span className="cover-join">&amp;</span>
             <span>{couple.bride}</span>
           </h1>
           <p className="cover-invitation-line">{opening.invitationLine}</p>
           <div className="cover-date"><span>{date.weekday}</span><time dateTime={date.iso}>{date.display}</time></div>
-          <a className="cover-action" href="#story" onClick={() => window.dispatchEvent(new Event('wedding:open-invitation'))}>
-            {opening.openButton}<ArrowRight size={17} strokeWidth={1.5} aria-hidden="true" />
-          </a>
         </motion.div>
 
         <div className="cover-art">

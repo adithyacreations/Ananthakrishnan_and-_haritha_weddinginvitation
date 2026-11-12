@@ -1,0 +1,12 @@
+.opening-gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;perspective:1600px;overflow-y:auto;overflow-x:hidden;min-height:100svh;color:#f8f1e6}
+.opening-leaf{position:absolute;inset-block:0;width:50%;background:radial-gradient(ellipse at center,#76292a,var(--wine-deep));border:1px solid #b69a6180;backface-visibility:hidden}
+.opening-leaf:before{content:'';position:absolute;inset:clamp(14px,3vw,30px);border:1px solid #d6bb7a80}
+.opening-leaf-left{left:0;transform-origin:left center}.opening-leaf-right{right:0;transform-origin:right center}
+.opening-gate-copy{position:relative;z-index:1;width:min(100%,680px);padding:40px 22px;text-align:center}
+.opening-gate-kicker{font:500 clamp(17px,2.5vw,21px)/1.6 var(--serif);letter-spacing:.05em;color:#dfc78e}
+.opening-gate-seal{display:flex;align-items:center;justify-content:center;gap:12px;width:120px;height:120px;margin:40px auto;border:1px solid #dbbf7f;border-radius:50%;outline:1px solid #dbbf7f70;outline-offset:7px;background:var(--wine-deep);color:#e9cf91;font:36px var(--serif)}
+.opening-gate-seal i{font-size:20px}.opening-gate-copy h1{margin:30px 0 24px;font:400 clamp(35px,6vw,66px)/1.35 'Parisienne',var(--serif);text-wrap:balance}.opening-gate-copy h1 i{font:italic .6em var(--serif);color:#dfc78e}
+.opening-gate-date{font:500 clamp(20px,3vw,26px)/1.5 var(--serif);letter-spacing:.04em;color:#dfc78e}
+.opening-gate-copy button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:54px;margin-top:32px;padding:16px 26px;border:1px solid #dbbf7f;background:#f8f1e6;color:var(--wine-deep);font:600 11px/1.5 'DM Sans',sans-serif;letter-spacing:.13em;text-transform:uppercase;cursor:pointer}
+.opening-gate-copy button:hover{background:#ead8ac}.opening-gate-copy button:focus-visible{outline:3px solid #fff0c5;outline-offset:6px}.cover-copy h1:focus{outline:none}
+@media(max-height:600px){.opening-gate-copy{padding:24px 20px}.opening-gate-seal{width:70px;height:70px;margin:18px auto;font-size:25px}.opening-gate-copy h1{margin:14px 0;font-size:36px}.opening-gate-copy button{margin-top:12px}}

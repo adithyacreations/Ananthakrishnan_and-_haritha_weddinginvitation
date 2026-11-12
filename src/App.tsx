@@ -15,8 +15,21 @@ import { useScrollReveal } from './hooks/useScrollReveal'
 import { KeralaHeritage } from './components/KeralaHeritage'
 import { BackwaterPassage } from './components/BackwaterPassage'
 import { InvitationCover } from './components/InvitationCover'
+import { useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import { OpeningGate } from './components/OpeningGate'
 
 function App() {
+  const [opened, setOpened] = useState(false)
+  return <>
+    <AnimatePresence onExitComplete={() => document.getElementById('opening-title')?.focus({ preventScroll: true })}>
+      {!opened && <OpeningGate key="opening-gate" onOpen={() => setOpened(true)} />}
+    </AnimatePresence>
+    {opened && <InvitationContent />}
+  </>
+}
+
+function InvitationContent() {
   const footerRevealRef = useScrollReveal<HTMLElement>()
   return <main>
     <MusicToggle />

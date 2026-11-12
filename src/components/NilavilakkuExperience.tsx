@@ -60,7 +60,7 @@ export function NilavilakkuExperience() {
       <FloralDivider />
       <h2 id="nilavilakku-heading">{wedding.nilavilakku.titleLine1}<br /><em>{wedding.nilavilakku.titleLine2}</em></h2>
       <p className="lamp-invitation">{wedding.nilavilakku.invitation}</p>
-      <button className="lamp-action" type="button" aria-pressed={lit} onClick={() => setLit(true)}>
+      <button className="lamp-action" type="button" aria-pressed={lit} onClick={() => setLit(previous => !previous)}>
         <span className="lamp-action-mark" aria-hidden="true">{lit ? '✦' : '✧'}</span>
         {lit ? wedding.nilavilakku.litAction : wedding.nilavilakku.action}
       </button>
