@@ -10,7 +10,6 @@ import './music-control.css'
 import './traditional-invitation.css'
 import './experience-finishing.css'
 import './kerala-artwork.css'
-import './cinematic-invitation.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode><App /></React.StrictMode>,
