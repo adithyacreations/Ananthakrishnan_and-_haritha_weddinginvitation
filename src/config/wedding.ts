@@ -41,9 +41,9 @@ export const wedding = {
     openButton: 'Open the invitation',
     scrollLabel: 'Made with love',
     illustration: {
-      src: '/images/podi haritha new.jpeg',
-      width: 1536,
-      height: 1024,
+      src: '/images/couple_photo_upscaled_4x.jpg',
+      width: 6140,
+      height: 4096,
       alt: `${couple.groom} and ${couple.bride} together in traditional Kerala attire.`,
     },
   },
