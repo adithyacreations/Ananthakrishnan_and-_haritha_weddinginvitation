@@ -39,6 +39,7 @@ export const wedding = {
     kicker: 'Together with our families',
     invitationLine: 'We warmly invite you to celebrate our wedding.',
     openButton: 'Open the invitation',
+    skipLabel: 'View wedding details',
     scrollLabel: 'Made with love',
     illustration: {
       src: '/images/artwork/wedding-cover.jpeg',

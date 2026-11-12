@@ -15,10 +15,12 @@ import { useScrollReveal } from './hooks/useScrollReveal'
 import { KeralaHeritage } from './components/KeralaHeritage'
 import { BackwaterPassage } from './components/BackwaterPassage'
 import { InvitationCover } from './components/InvitationCover'
+import { useLayeredInvitation } from './hooks/useLayeredInvitation'
 
 function App() {
   const footerRevealRef = useScrollReveal<HTMLElement>()
-  return <main>
+  const invitationRef = useLayeredInvitation()
+  return <main ref={invitationRef}>
     <MusicToggle />
     <InvitationCover />
 
