@@ -54,6 +54,7 @@ main{overflow:clip}
 /* A quiet, horizontal journey between the family album and the lamp. */
 .backwater-passage{position:relative;isolation:isolate;overflow:hidden;background:var(--wine-deep);color:#eee5cb;padding:70px 24px 0;text-align:center}
 .backwater-passage:before{content:'';position:absolute;inset:14px;border:1px solid #cfb57829;pointer-events:none}
+.backwater-passage:after{content:'';position:absolute;z-index:3;inset:auto 0 0;height:2px;background:linear-gradient(90deg,#a7894f70,#d6bb7a 20%,#fff0c5 50%,#d6bb7a 80%,#a7894f70);pointer-events:none}
 .backwater-copy{position:relative;z-index:2}
 .backwater-copy .eyebrow{color:#c9b982;font-size:9px;letter-spacing:.24em}
 .backwater-copy h2{font:400 clamp(38px,4.5vw,60px)/1.08 var(--serif);margin:18px 0;color:#f8efda}
