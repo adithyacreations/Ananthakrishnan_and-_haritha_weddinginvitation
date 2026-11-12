@@ -45,7 +45,13 @@ The family album section is no longer rendered in `App.tsx`. Its reusable galler
 
 Guest sharing uses `sharing.message` and `sharing.deployedUrl`. Set `deployedUrl` to the public invitation URL before publishing; when it is empty, the current website URL is used. The WhatsApp action opens a composed message for the guest to review and send; copying the URL reports success or failure based on the browser clipboard result.
 
-RSVP is disabled by default because no submission service is configured. To preview the clearly marked demo form, set `rsvp.enabled` to `true`; demo responses are not sent or saved. To receive real RSVPs, connect a form endpoint that accepts a JSON `POST` and set `rsvp.submissionUrl` to that endpoint before enabling the form. The page reports success only when the endpoint returns an HTTP success status. Configure endpoint privacy, validation, and storage with your chosen provider.
+RSVP uses the published [Tally form](https://tally.so/r/bZj76g) with its two required questions: Guest Name and attendance (Yes/No). Edit the form in Tally to change its questions; the website does not create inputs or submit responses itself. Tally handles submission, its existing Thank You page, and your existing Google Sheets integration. No guest responses or counts are displayed on the website. Set `rsvp.enabled` to `false` to hide the section.
+
+The standard embed uses Tally's official script for dynamic height, a transparent background, and a hidden form title. A direct form link remains available if an embed is blocked. URLs and section copy are editable under `rsvp` in `src/config/wedding.ts`.
+
+In Tally, choose **Customize → Custom**: background `#faf5e9`, text `#53322e`, button and accent `#761a22`, and font **DM Sans** to match the website's form/control typography. The surrounding heading retains the site's Cormorant Garamond serif. These basic colors and fonts are free; no custom CSS, custom domain, or branding-removal upgrade is needed. Host CSS cannot style the iframe's fields. Keep both questions required and retain your existing Thank You page and Google Sheets integration. See [Tally customization](https://tally.so/help/customize-your-form) and [standard embeds](https://tally.so/help/embed-your-form).
+
+To verify the complete submission flow, submit one clearly identified test RSVP yourself, confirm the Tally Thank You page, and check that one row arrives in your connected sheet. Rendering the form alone cannot verify that private integration.
 
 The countdown targets **6:00 AM IST on 10 December 2026**. The marriage ceremony is scheduled from **5:00 to 6:00 AM**. Its timestamp includes the `+05:30` offset, and `Asia/Kolkata` is used to display the event time. The journey to Guruvayoor is listed separately on 9 December at 2:00 PM, followed by the wedding function on the morning of 10 December.
 

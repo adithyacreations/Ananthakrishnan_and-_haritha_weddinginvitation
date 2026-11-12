@@ -14,8 +14,13 @@ function WeddingEventCard({ event, index, reduceMotion }: { event: WeddingEvent;
     <h3>{event.title}</h3>
     <p className="event-detail-line"><CalendarDays size={15} aria-hidden="true" />{event.date}</p>
     <p className="event-detail-line"><Clock3 size={15} aria-hidden="true" />{event.time}</p>
-    <p className="event-detail-line"><MapPin size={15} aria-hidden="true" />{event.location}</p>
+    <p className="event-detail-line"><MapPin size={15} aria-hidden="true" /><span>{event.location}{'destination' in event && <><br />{event.destination}</>}</span></p>
     <p className="wedding-event-description">{event.description}</p>
+    {'directionsUrl' in event && <div className="event-directions">
+      <a href={event.directionsUrl} target="_blank" rel="noopener noreferrer" aria-label={`${wedding.events.directionsLabel}: ${event.directionsContext}`}>
+        <MapPin size={14} aria-hidden="true" />{wedding.events.directionsLabel}
+      </a>
+    </div>}
   </motion.article>
 }
 

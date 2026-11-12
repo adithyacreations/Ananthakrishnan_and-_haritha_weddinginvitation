@@ -1,12 +1,12 @@
 /** All invitation copy and personal details live here for easy updating. */
-const couple = { bride: 'Dr Haritha', groom: 'Anandha Krihsnan' } as const
+const couple = { bride: 'Haritha', groom: 'Anandhu' } as const
 const couplePhoto = '/images/couple-hero.png'
 const bridePhoto = '/images/HARITHA.jpeg'
-const groomPhoto = '/images/PODI.jpeg'
+const groomPhoto = '/images/PODI-portrait.jpeg'
 const photoAlt = {
   couple: `${couple.groom} and ${couple.bride} together in Kerala wedding attire.`,
   bride: `${couple.bride} smiling in a black and white saree.`,
-  groom: `${couple.groom} wearing sunglasses, a red patterned shirt and a cream mundu.`,
+  groom: `${couple.groom} wearing sunglasses and a red patterned shirt.`,
 }
 
 export const wedding = {
@@ -39,7 +39,7 @@ export const wedding = {
     kicker: 'Together with our families',
     invitationLine: 'We warmly invite you to celebrate our wedding.',
     openButton: 'Open the invitation',
-    scrollLabel: 'Made with love in Kerala',
+    scrollLabel: 'Made with love',
     illustration: {
       src: '/images/artwork/wedding-cover.jpeg',
       width: 1600,
@@ -97,6 +97,8 @@ export const wedding = {
     ],
     brideCaption: 'The bride',
     groomCaption: 'The groom',
+    bridePortraitName: 'Ms.Haritha Harikumar',
+    groomPortraitName: 'Mr Anandha Krishnan K',
   },
   countdown: {
     eyebrow: 'Until the Thaali Kettu',
@@ -117,13 +119,27 @@ export const wedding = {
     eyebrow: 'Our wedding celebrations',
     title: 'A journey, a blessing, a beginning.',
     introduction: 'We look forward to sharing these auspicious moments with you.',
+    directionsLabel: 'Directions',
     items: [
+      {
+        title: 'Journey to Guruvayoor',
+        date: 'Wednesday, 9 December 2026',
+        time: '8:00 AM',
+        description: 'Morning departure from Melila Sree Dharmashastha Temple for Guruvayoor.',
+        location: 'Starting point: Melila Sree Dharmashastha Temple',
+        destination: 'Destination: Guruvayoor, Sri Krishna Temple',
+        directionsUrl: 'https://maps.app.goo.gl/KSWoTuAs1WbRGMAU6',
+        directionsContext: 'Melila Sree Dharmashastha Temple — 8:00 AM departure',
+      },
       {
         title: 'Journey to Guruvayoor',
         date: 'Wednesday, 9 December 2026',
         time: '2:00 PM',
         description: 'Departure from the family residence for Guruvayoor.',
-        location: 'Starting point: Family residence · Destination: Guruvayoor, Sri Krishna Temple',
+        location: 'Starting point: Family residence',
+        destination: 'Destination: Guruvayoor, Sri Krishna Temple',
+        directionsUrl: 'https://maps.app.goo.gl/PLtWSh4FiYq2b6X3A',
+        directionsContext: 'Family residence — 2:00 PM departure',
       },
       {
         title: 'Thaali Kettu / Marriage Ceremony',
@@ -131,6 +147,8 @@ export const wedding = {
         time: '5:00–6:00 AM',
         description: 'The auspicious marriage ceremony.',
         location: 'Guruvayoor, Sri Krishna Temple',
+        directionsUrl: 'https://maps.app.goo.gl/DSEoQGAAcUfLYab16',
+        directionsContext: 'Guruvayoor, Sri Krishna Temple',
       },
       {
         title: 'Wedding Function',
@@ -138,6 +156,8 @@ export const wedding = {
         time: '10:00 AM',
         description: 'The wedding function and family celebration.',
         location: 'K R Thekkedathu Mana, Pazhiyotttumuri, Kunnamkulam',
+        directionsUrl: 'https://maps.app.goo.gl/14frRHHFpSspsUUR7',
+        directionsContext: 'K R Thekkedathu Mana',
       },
     ],
   },
@@ -145,7 +165,7 @@ export const wedding = {
     eyebrow: 'Where we gather for the Thaali Kettu',
     name: 'Guruvayoor, Sri Krishna Temple',
     address: '',
-    directionsUrl: '',
+    directionsUrl: 'https://maps.app.goo.gl/DSEoQGAAcUfLYab16',
     directionsLabel: 'Get directions',
   },
   dressCode: { enabled: false, eyebrow: '', title: '', description: '', note: '' },
@@ -177,23 +197,15 @@ export const wedding = {
     whatsappErrorMessage: 'Could not open WhatsApp. You can copy and share the invitation link instead.',
   },
   rsvp: {
-    enabled: false,
+    enabled: true,
     eyebrow: 'Kindly reply',
     title: 'Will you join us?',
     introduction: 'Please let us know if you can attend.',
-    submissionUrl: '',
-    demoNotice: 'RSVP preview only: no response will be sent or saved. Connect a submission service and add its URL in wedding.ts before enabling this form for guests.',
-    nameLabel: 'Your name',
-    attendanceLabel: 'Will you be joining us?',
-    attendancePrompt: 'Please select a response',
-    attendingOption: 'Joyfully accepts',
-    decliningOption: 'Regretfully declines',
-    guestCountLabel: 'Number of guests',
-    noteLabel: 'A note for the families (optional)',
-    submitLabel: 'Send RSVP',
-    demoSubmitLabel: 'Preview response (demo)',
-    successMessage: 'Thank you. Your RSVP was received.',
-    errorMessage: 'Your RSVP could not be sent. Please try again later or contact the family.',
+    formUrl: 'https://tally.so/r/bZj76g',
+    embedUrl: 'https://tally.so/embed/bZj76g?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
+    frameTitle: 'Wedding RSVP — Guest Name and Attendance',
+    fallbackText: 'Having trouble with the form?',
+    fallbackLinkLabel: 'Open RSVP in a new tab',
   },
   images: {
     couple: couplePhoto,
@@ -214,6 +226,11 @@ export const wedding = {
     paused: 'Wedding music is paused',
     error: 'Wedding music is unavailable. The invitation is still ready to explore.',
     autoplayBlocked: 'Tap play to start the music',
+  },
+  developerCredit: {
+    label: 'Developed by',
+    name: 'Adithya M',
+    url: 'https://www.linkedin.com/in/adithya-m-aa7102359',
   },
   contacts: [
     { name: 'Mr. Krishnakumar T and Mrs. Preetha S', address: 'Santhamandhiram, Melila P.O., Kunnicode', phones: ['9605940787', '9746468083'] },

@@ -26,6 +26,11 @@
 .wedding-event-number{color:#a38953;font:italic 14px var(--serif)}.wedding-event-card h3{position:relative;margin:17px 0 19px;color:var(--wine);font:400 27px/1.05 var(--serif)}
 .event-detail-line{display:flex;align-items:flex-start;gap:9px;margin:10px 0;color:#635048;font-size:10px;line-height:1.5}.event-detail-line svg{flex:none;color:#a98d53}
 .wedding-event-description{margin:17px 0 0;padding-top:14px;border-top:1px solid rgba(173,143,83,.26);color:#73766d;font:300 13px/1.7 var(--serif)}
+.event-directions{margin-top:8px}
+.event-directions a{display:inline-flex;align-items:center;gap:7px;min-height:44px;color:var(--maroon);font:500 12px/1.5 'DM Sans',sans-serif;text-decoration:underline;text-underline-offset:4px}
+.event-directions a svg{color:var(--antique-gold);flex:none}
+.event-directions a:hover{color:var(--wine-deep)}
+.event-directions a:focus-visible{outline:2px solid var(--maroon);outline-offset:4px}
 .venue{min-height:470px}.venue-image{background:#d6d1c3}.venue-image>.venue-photo{filter:saturate(.85)}
 .venue-copy{position:relative}.venue-copy:before{content:"";position:absolute;inset:22px;border:1px solid rgba(173,143,83,.28);pointer-events:none}
 .venue-copy h2{font-size:clamp(38px,4.6vw,54px);line-height:1}.venue-copy>p:not(.eyebrow){max-width:360px;line-height:1.65}.venue-copy>a{display:inline-flex;align-items:center;gap:8px}

@@ -19,13 +19,13 @@ export function CoupleStory() {
       {story.paragraphs.map((paragraph) => <p className="couple-story-paragraph" key={paragraph}>{paragraph}</p>)}
     </motion.div>
     <div className="story-photos" aria-label="Portraits of the couple">
-      <motion.figure className="story-photo story-photo-bride" initial={reduceMotion ? false : { opacity: 0, y: 20 }} whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }} transition={{ duration: .65, ease: 'easeOut' }}>
-        <WeddingImage className="story-portrait" src={wedding.images.bride} alt={wedding.images.alt.bride} fallbackLabel={story.brideCaption} loading="lazy" decoding="async" />
-        <figcaption>{story.brideCaption}<span>{wedding.couple.bride}</span></figcaption>
-      </motion.figure>
-      <motion.figure className="story-photo story-photo-groom" initial={reduceMotion ? false : { opacity: 0, y: 20 }} whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }} transition={{ duration: .7, delay: .1, ease: 'easeOut' }}>
+      <motion.figure className="story-photo story-photo-groom" initial={reduceMotion ? false : { opacity: 0, y: 20 }} whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }} transition={{ duration: .65, ease: 'easeOut' }}>
         <WeddingImage className="story-portrait" src={wedding.images.groom} alt={wedding.images.alt.groom} fallbackLabel={story.groomCaption} loading="lazy" decoding="async" />
-        <figcaption>{story.groomCaption}<span>{wedding.couple.groom}</span></figcaption>
+        <figcaption>{story.groomCaption}<span>{story.groomPortraitName}</span></figcaption>
+      </motion.figure>
+      <motion.figure className="story-photo story-photo-bride" initial={reduceMotion ? false : { opacity: 0, y: 20 }} whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }} transition={{ duration: .7, delay: .1, ease: 'easeOut' }}>
+        <WeddingImage className="story-portrait" src={wedding.images.bride} alt={wedding.images.alt.bride} fallbackLabel={story.brideCaption} loading="lazy" decoding="async" />
+        <figcaption>{story.brideCaption}<span>{story.bridePortraitName}</span></figcaption>
       </motion.figure>
     </div>
   </section>
