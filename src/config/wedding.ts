@@ -41,10 +41,10 @@ export const wedding = {
     openButton: 'Open the invitation',
     scrollLabel: 'Made with love',
     illustration: {
-      src: '/images/artwork/wedding-cover.jpeg',
-      width: 1600,
-      height: 1392,
-      alt: `Wedding illustration of ${couple.groom} and ${couple.bride} in traditional attire.`,
+      src: '/images/podi haritha new.jpeg',
+      width: 1536,
+      height: 1024,
+      alt: `${couple.groom} and ${couple.bride} together in traditional Kerala attire.`,
     },
   },
   closingMessage: 'Your presence and blessings are our greatest gift.',
@@ -135,11 +135,11 @@ export const wedding = {
         title: 'Journey to Guruvayoor',
         date: 'Wednesday, 9 December 2026',
         time: '2:00 PM',
-        description: 'Departure from the family residence for Guruvayoor.',
-        location: 'Starting point: Family residence',
+        description: "Departure from the groom's family residence for Guruvayoor.",
+        location: "Starting point: Groom's family residence",
         destination: 'Destination: Guruvayoor, Sri Krishna Temple',
         directionsUrl: 'https://maps.app.goo.gl/PLtWSh4FiYq2b6X3A',
-        directionsContext: 'Family residence — 2:00 PM departure',
+        directionsContext: "Groom's family residence — 2:00 PM departure",
       },
       {
         title: 'Thaali Kettu / Marriage Ceremony',
@@ -237,3 +237,4 @@ export const wedding = {
     { name: 'Mr. Harikumar G and Mrs. Ambili K', address: 'Santham, Melila P.O., Kunnicode', phones: [] },
   ],
 } as const
+

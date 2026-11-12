@@ -1,10 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { CalendarDays, Clock3, MapPin } from 'lucide-react'
 import { wedding } from '../config/wedding'
-import { FloralDivider } from './FloralDivider'
 import { GlimmerField } from './GlimmerField'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { ScrollArtwork, LotusOrnament } from './KeralaArtwork'
 
 type WeddingEvent = (typeof wedding.events.items)[number]
 
@@ -27,20 +25,11 @@ function WeddingEventCard({ event, index, reduceMotion }: { event: WeddingEvent;
 export function WeddingEvents() {
   const reduceMotion = useReducedMotion()
   const revealRef = useScrollReveal<HTMLElement>()
-  return <section ref={revealRef} data-scroll-reveal className="wedding-events" id="events" aria-labelledby="wedding-events-title">
+  return <section ref={revealRef} data-scroll-reveal className="wedding-events" id="events" aria-label={wedding.events.eyebrow}>
     <GlimmerField variant="events" />
-    <div className="wedding-events-heading">
-      <p className="eyebrow">{wedding.events.eyebrow}</p><FloralDivider />
-      <h2 id="wedding-events-title">{wedding.events.title}</h2>
-      <p>{wedding.events.introduction}</p>
-    </div>
-    <div className={`celebrations-layout${wedding.artwork.enabled ? ' has-artwork' : ''}`}>
-      {wedding.artwork.enabled && <div className="celebrations-illustration">
-        <LotusOrnament />
-        <ScrollArtwork image="celebration" distance={24} decorative={false} />
-        <span className="celebrations-art-date">{wedding.date.shortDisplay}</span>
-      </div>}
+    <div className="celebrations-layout">
       <div className="wedding-event-grid">{wedding.events.items.map((event, index) => <WeddingEventCard key={`${event.title}-${index}`} event={event} index={index} reduceMotion={reduceMotion} />)}</div>
     </div>
   </section>
 }
+

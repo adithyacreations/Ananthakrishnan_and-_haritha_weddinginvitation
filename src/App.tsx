@@ -8,11 +8,9 @@ import { NilavilakkuExperience } from './components/NilavilakkuExperience'
 import { RsvpSection } from './components/RsvpSection'
 import { WeddingCountdown } from './components/WeddingCountdown'
 import { WeddingEvents } from './components/WeddingEvents'
-import { VenueSection } from './components/VenueSection'
 import { GlimmerField } from './components/GlimmerField'
 import { PetalDrift } from './components/PetalDrift'
 import { useScrollReveal } from './hooks/useScrollReveal'
-import { KeralaHeritage } from './components/KeralaHeritage'
 import { BackwaterPassage } from './components/BackwaterPassage'
 import { InvitationCover } from './components/InvitationCover'
 import { useState } from 'react'
@@ -37,12 +35,10 @@ function InvitationContent() {
 
     <FamilyInvitation />
     <WeddingCountdown />
-    <KeralaHeritage />
     <CoupleStory />
     {wedding.artwork.enabled && <BackwaterPassage />}
     <NilavilakkuExperience />
     <WeddingEvents />
-    <VenueSection />
     <GuestGuidance />
     <RsvpSection />
     <InvitationSharing />

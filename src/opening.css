@@ -229,3 +229,17 @@
 @media (prefers-reduced-motion: reduce) {
   .cover-action { transition: none; }
 }
+
+/* Full-bleed photographic hero; the separate opening card is unchanged. */
+.photo-cover{position:relative;isolation:isolate;min-height:100svh;padding:0;background:#291c16;overflow:hidden}
+.photo-cover .cover-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;z-index:-2}
+.photo-cover:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#170d0c55,#170d0c65 50%,#170d0ca6)}
+.photo-cover .cover-card{width:100%;min-height:100svh;border:0;background:transparent;box-shadow:none;color:#fff6e5}
+.photo-cover .cover-card:before{display:none}
+.photo-cover .cover-layout{grid-template-columns:1fr;padding:45px 24px;gap:0}
+.photo-cover .cover-copy{max-width:680px;width:100%;margin:auto;text-shadow:0 2px 15px #160e0c80}
+.photo-cover .cover-copy h1{font-size:clamp(54px,6vw,90px);color:#fff6e5}
+.photo-cover .cover-topline,.photo-cover .cover-monogram,.photo-cover .cover-kicker,.photo-cover .cover-invitation-line,.photo-cover .cover-date,.photo-cover .cover-date>span,.photo-cover .cover-scroll{color:#fff3dc}
+.photo-cover .cover-copy h1 .cover-join,.photo-cover .cover-monogram i{color:#e8cd90}
+.photo-cover .cover-scroll{position:relative;inset:auto;justify-self:center;margin:0;padding:24px 20px 34px}
+@media(max-width:600px){.photo-cover .cover-background{object-position:52% center}.photo-cover .cover-layout{padding:38px 24px}.photo-cover .cover-copy h1{font-size:clamp(50px,13vw,70px)}}

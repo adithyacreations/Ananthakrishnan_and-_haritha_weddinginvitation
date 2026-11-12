@@ -54,3 +54,7 @@
 @media(max-width:520px){.family-names{flex-direction:column;gap:7px}.family-names span{max-width:100%}.family-names b{font-size:12px}}
 @media(max-width:420px){.countdown-unit{min-width:50px}.countdown-unit strong{font-size:38px}.countdown-local-time{font-size:8px}.story-photo figcaption{padding-inline:10px;font-size:13px}.story-photo figcaption span{font-size:7px}}
 @media(prefers-reduced-motion:reduce){.couple-story-copy,.story-photo,.wedding-event-card,.wedding-events{transition:none!important}}
+
+.venue.venue-without-photo{grid-template-columns:1fr;min-height:0}
+.venue-without-photo .venue-copy{align-items:center;text-align:center;width:100%;max-width:900px;margin-inline:auto}
+.venue-without-photo .floral-divider{margin-inline:auto}
